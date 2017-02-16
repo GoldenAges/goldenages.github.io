@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="技术," />
 
 
 
@@ -58,15 +58,31 @@
 
 
 
-<meta name="description" content="这是一个美好的世界，值得我们去奋斗！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Golden Era's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
+第一步：添加新用户，然后设置密码
+adduser username
+#授予root权限1gpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口
+既然">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从零开始建站(三)--增强VPS的安全性">
+<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="这是一个美好的世界，值得我们去奋斗！">
+<meta property="og:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
+第一步：添加新用户，然后设置密码
+adduser username
+#授予root权限1gpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口
+既然">
+<meta property="og:updated_time" content="2017-02-16T03:55:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Golden Era's Blog">
-<meta name="twitter:description" content="这是一个美好的世界，值得我们去奋斗！">
+<meta name="twitter:title" content="从零开始建站(三)--增强VPS的安全性">
+<meta name="twitter:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
+第一步：添加新用户，然后设置密码
+adduser username
+#授予root权限1gpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口
+既然">
 
 
 
@@ -94,13 +110,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/"/>
 
 
 
 
 
-  <title> Golden Era's Blog </title>
+  <title> 从零开始建站(三)--增强VPS的安全性 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -121,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -204,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -239,10 +253,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" itemprop="url">
-                  从零开始建站(三)--增强VPS的安全性
-                </a>
+                从零开始建站(三)--增强VPS的安全性
               
             
           </h2>
@@ -305,326 +316,82 @@
       
 
       
-        
-          
-          当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码
-adduser username
-#授予roo
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。<br>默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。</p>
+<p>第一步：添加新用户，然后设置密码</p>
+<p>adduser username</p>
+<p>#授予root权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure></p>
+<p>第二步：禁止远程root登陆，修改默认端口</p>
+<p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
+<p>第三步：使改变生效</p>
+<h1 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh restart</div></pre></td></tr></table></figure>
+<p>重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。</p>
+<p>第四步：使用更加安全的 <code>ssh_key</code> 来登陆</p>
+<p>这一步不是必需的，只是为了方便和进一步增强安全性。配置ssh_keys之后，当你使用自己的电脑就不用输入密码。<br>ssh_key 的生成很简单 ，本地输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
+<p>这条命令会在 ～/.ssh/ 目录下生成 id_rsa 和 id_rsa.pub，即私钥和公钥。再在本地命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id apple@SERVER_IP_ADDRESS</div></pre></td></tr></table></figure></p>
+<p>，然后键入密码，这时就会将本地的公钥添加至服务器 ~/.ssh/authorized_keys 里，里面的内容就是已通过认证的公钥，当你使用这些客户端登录时，就不用输入密码<br>至此，你的服务器几乎能避免绝大多数攻击，如果要进一步增加安全性，则可向着如下方向改进：</p>
+<p>仅使用 ssh_key 登录，禁止普通用户登录<br>增加防火墙设置，将多次尝试登录的IP地址加入黑名单<br>添加安全证书的验证</p>
+<p>参考：</p>
+<ol>
+<li><a href="https://www.v2ex.com/t/211641" target="_blank" rel="external">一些增强 SSH 安全性的技巧</a></li>
+<li><a href="https://www.linux.com/learn/tutorials/305769-advanced-ssh-security-tips-and-tricks" target="_blank" rel="external">Advanced SSH security tips and tricks</a></li>
+</ol>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Golden Era">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Golden Era's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Golden Era's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" itemprop="url">
-                  从零开始建站(二)--VirtualHost的配置
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:49:23+08:00">
-                2017-02-16
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T11:54:39+08:00">
-                2017-02-16
-              </time>
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/技术/" rel="tag"># 技术</a>
           
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          目的：配置虚拟主机，映射目录
-&emsp;&emsp;当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" rel="next" title="从零开始建站(二)--VirtualHost的配置">
+                <i class="fa fa-chevron-left"></i> 从零开始建站(二)--VirtualHost的配置
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(一)--安装LAMP环境/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Golden Era">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="Golden Era's Blog">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="Golden Era's Blog" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2017/02/16/从零开始建站(一)--安装LAMP环境/" itemprop="url">
-                  从零开始建站(一)--安装LAMP环境
-                </a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:47:04+08:00">
-                2017-02-16
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T11:51:21+08:00">
-                2017-02-16
-              </time>
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          &emsp;&emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，搬瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!
-VPS提供商：Digitalocean服务器环境：Ubuntu
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/16/从零开始建站(一)--安装LAMP环境/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -632,6 +399,10 @@ VPS提供商：Digitalocean服务器环境：Ubuntu
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -651,8 +422,17 @@ VPS提供商：Digitalocean服务器环境：Ubuntu
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -701,6 +481,22 @@ VPS提供商：Digitalocean服务器环境：Ubuntu
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重启ssh服务"><span class="nav-number">1.</span> <span class="nav-text">重启ssh服务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
@@ -800,6 +596,10 @@ VPS提供商：Digitalocean服务器环境：Ubuntu
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -831,6 +631,10 @@ VPS提供商：Digitalocean服务器环境：Ubuntu
 
   
 
+  
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+      <!-- UY END -->
   
 
 
