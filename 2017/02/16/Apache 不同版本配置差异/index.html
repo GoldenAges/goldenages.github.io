@@ -58,31 +58,19 @@
 
 
 
-<meta name="description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码
-adduser username
-#授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口
-既然">
+<meta name="description" content="&amp;emsp;&amp;emsp;LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
+&amp;emsp;&amp;emsp;所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Goo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/index.html">
+<meta property="og:title" content="Apache 不同版本配置差异">
+<meta property="og:url" content="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码
-adduser username
-#授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口
-既然">
-<meta property="og:updated_time" content="2017-02-16T03:55:45.000Z">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
+&amp;emsp;&amp;emsp;所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Goo">
+<meta property="og:updated_time" content="2017-02-16T07:14:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta name="twitter:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码
-adduser username
-#授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口
-既然">
+<meta name="twitter:title" content="Apache 不同版本配置差异">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
+&amp;emsp;&amp;emsp;所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Goo">
 
 
 
@@ -110,13 +98,13 @@ adduser username
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/"/>
 
 
 
 
 
-  <title> 从零开始建站(三)--增强VPS的安全性 | Golden Era's Blog </title>
+  <title> Apache 不同版本配置差异 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -229,7 +217,7 @@ adduser username
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -253,7 +241,7 @@ adduser username
             
             
               
-                从零开始建站(三)--增强VPS的安全性
+                Apache 不同版本配置差异
               
             
           </h2>
@@ -268,7 +256,7 @@ adduser username
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:51:20+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:12:10+08:00">
                 2017-02-16
               </time>
             
@@ -284,7 +272,7 @@ adduser username
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T11:55:45+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T15:14:04+08:00">
                 2017-02-16
               </time>
             
@@ -316,24 +304,27 @@ adduser username
       
 
       
-        <p>当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。<br>默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。</p>
-<p>第一步：添加新用户，然后设置密码</p>
-<p>adduser username</p>
-<p>#授予root权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure></p>
-<p>第二步：禁止远程root登陆，修改默认端口</p>
-<p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
-<p>第三步：使改变生效</p>
-<h1 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh restart</div></pre></td></tr></table></figure>
-<p>重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。</p>
-<p>第四步：使用更加安全的 <code>ssh_key</code> 来登陆</p>
-<p>这一步不是必需的，只是为了方便和进一步增强安全性。配置ssh_keys之后，当你使用自己的电脑就不用输入密码。<br>ssh_key 的生成很简单 ，本地输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
-<p>这条命令会在 ～/.ssh/ 目录下生成 id_rsa 和 id_rsa.pub，即私钥和公钥。再在本地命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id apple@SERVER_IP_ADDRESS</div></pre></td></tr></table></figure></p>
-<p>，然后键入密码，这时就会将本地的公钥添加至服务器 ~/.ssh/authorized_keys 里，里面的内容就是已通过认证的公钥，当你使用这些客户端登录时，就不用输入密码<br>至此，你的服务器几乎能避免绝大多数攻击，如果要进一步增加安全性，则可向着如下方向改进：</p>
-<p>仅使用 ssh_key 登录，禁止普通用户登录<br>增加防火墙设置，将多次尝试登录的IP地址加入黑名单<br>添加安全证书的验证</p>
-<p>参考：</p>
+        <p>&emsp;&emsp;LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。</p>
+<p>&emsp;&emsp;所以寻找问题的思路很重要，应该是查看报错信息 -&gt; 查看错误日记 -&gt; Google -&gt; 官方文档 -&gt; 求助他人，而不是一股脑的就把错误信息copy到搜索引擎中去，这样可能会浪费大量的时间。</p>
+<p>下面描述的均是从2.2和2.4配置不同之处，如果是从2.0和2.2，请看参考</p>
+<h3 id="访问权限的配置"><a href="#访问权限的配置" class="headerlink" title="访问权限的配置"></a>访问权限的配置</h3><ul>
+<li><p>拒绝所有访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order deny,allow</div><div class="line">Deny from all</div><div class="line">#2.4 configuration</div><div class="line">Require all denied</div></pre></td></tr></table></figure>
+</li>
+<li><p>允许有来源访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order allow,deny</div><div class="line">Allow from all</div><div class="line">#2.4 configuration</div><div class="line">Require all granted</div></pre></td></tr></table></figure>
+</li>
+<li><p>仅允许特定域名访问</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order Deny,Allow</div><div class="line">Deny from all</div><div class="line">Allow from example.org</div><div class="line">#2.4 configuration</div><div class="line">Require host example.org</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Keep-alive参数"><a href="#Keep-alive参数" class="headerlink" title="Keep-alive参数"></a><a href="https://en.wikipedia.org/wiki/Keepalive" target="_blank" rel="external">Keep-alive</a>参数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2.2 除了 ‘Off’ 和 ‘0’ 之外的所有值都被当作是 ‘On’</div><div class="line">2.4 仅允许 ‘On’ 或 ‘Off’</div></pre></td></tr></table></figure>
+<p>这里只是列出了两个比较常见的配置，更多请参考官方文档。</p>
 <ol>
-<li><a href="https://www.v2ex.com/t/211641" target="_blank" rel="external">一些增强 SSH 安全性的技巧</a></li>
-<li><a href="https://www.linux.com/learn/tutorials/305769-advanced-ssh-security-tips-and-tricks" target="_blank" rel="external">Advanced SSH security tips and tricks</a></li>
+<li><p><a href="http://httpd.apache.org/docs/2.2/upgrading.html" target="_blank" rel="external">2.0 to 2.2 upgrading document</a></p>
+</li>
+<li><p><a href="https://www.v2ex.com/go/apache" target="_blank" rel="external">V2EX的Apache节点</a></p>
+</li>
 </ol>
 
       
@@ -367,8 +358,8 @@ adduser username
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" rel="next" title="从零开始建站(二)--VirtualHost的配置">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(二)--VirtualHost的配置
+              <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" rel="next" title="从零开始建站(三)--增强VPS的安全性">
+                <i class="fa fa-chevron-left"></i> 从零开始建站(三)--增强VPS的安全性
               </a>
             
           </div>
@@ -376,10 +367,6 @@ adduser username
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/Apache 不同版本配置差异/" rel="prev" title="Apache 不同版本配置差异">
-                Apache 不同版本配置差异 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,7 +482,7 @@ adduser username
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重启ssh服务"><span class="nav-number">1.</span> <span class="nav-text">重启ssh服务</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#访问权限的配置"><span class="nav-number">1.</span> <span class="nav-text">访问权限的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keep-alive参数"><span class="nav-number">2.</span> <span class="nav-text">Keep-alive参数</span></a></li></ol></div>
             
 
           </div>
