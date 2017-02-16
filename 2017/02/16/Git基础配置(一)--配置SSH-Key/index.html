@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="技术,Git," />
 
 
 
@@ -58,19 +58,16 @@
 
 
 
-<meta name="description" content="关于VPS&amp;emsp;&amp;emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
-&amp;emsp;&amp;emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，">
+<meta name="description" content="工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不可取，工作是以漂亮完成任务为目的，深究原理会消耗大量工作时间。了解原理的事可以空闲时间琢磨，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(一)--安装LAMP环境">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(一)--安装LAMP环境/index.html">
+<meta property="og:title" content="Git基础配置(一)--配置SSH-Key">
+<meta property="og:url" content="http://yoursite.com/2017/02/16/Git基础配置(一)--配置SSH-Key/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="关于VPS&amp;emsp;&amp;emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
-&amp;emsp;&amp;emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，">
-<meta property="og:updated_time" content="2017-02-16T07:34:32.000Z">
+<meta property="og:description" content="工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不可取，工作是以漂亮完成任务为目的，深究原理会消耗大量工作时间。了解原理的事可以空闲时间琢磨，">
+<meta property="og:updated_time" content="2017-02-16T07:28:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(一)--安装LAMP环境">
-<meta name="twitter:description" content="关于VPS&amp;emsp;&amp;emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。
-&amp;emsp;&amp;emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，">
+<meta name="twitter:title" content="Git基础配置(一)--配置SSH-Key">
+<meta name="twitter:description" content="工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不可取，工作是以漂亮完成任务为目的，深究原理会消耗大量工作时间。了解原理的事可以空闲时间琢磨，">
 
 
 
@@ -98,13 +95,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(一)--安装LAMP环境/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/16/Git基础配置(一)--配置SSH-Key/"/>
 
 
 
 
 
-  <title> 从零开始建站(一)--安装LAMP环境 | Golden Era's Blog </title>
+  <title> Git基础配置(一)--配置SSH-Key | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,7 +214,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(一)--安装LAMP环境/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/Git基础配置(一)--配置SSH-Key/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -241,7 +238,7 @@
             
             
               
-                从零开始建站(一)--安装LAMP环境
+                Git基础配置(一)--配置SSH-Key
               
             
           </h2>
@@ -256,7 +253,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:47:04+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:24:44+08:00">
                 2017-02-16
               </time>
             
@@ -272,7 +269,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T15:34:32+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-16T15:28:54+08:00">
                 2017-02-16
               </time>
             
@@ -304,56 +301,32 @@
       
 
       
-        <h2 id="关于VPS"><a href="#关于VPS" class="headerlink" title="关于VPS"></a>关于VPS</h2><p>&emsp;&emsp;可以将VPS理解为一台在世界某个角落的一台电脑，这台电脑上操作系统，配置都可以通过命令行（Linux系统）或界面（Windows系统）来完成，唯一和你手边电脑不同的是不能通过眼睛看到，手摸到。下面只针对世界上大部分使用的Linux服务器来说明如何远程操控这台“电脑”。</p>
-<p>&emsp;&emsp;当你从VPS服务商（DIgitalOcean，Conhon，Lindo，搬瓦工）购买了一台虚拟主机之后，如何通过一步步的配置，使之成为一个能被正常访问的网站呢？Let’s try it step by step!</p>
-<p>VPS提供商：Digitalocean<br>服务器环境：Ubuntu 12.04.5 x64<br>服务器配置：512MB Ram | 20GB SSD Disk | San Francisco<br>客户端：Windows7 旗舰版<br>目的：配置LAMP环境</p>
-<h2 id="关于LAMP"><a href="#关于LAMP" class="headerlink" title="关于LAMP"></a>关于LAMP</h2><p>&emsp;&emsp;LAMP是一组用来搭建网站或者服务器的开源软件，他们本身都是独立的软件，LAMP则是Linux，Apache，MySQL，PHP的首字母缩写，因为我们使用的Ubuntu正是Linux的一个发行版，所以接下来只需要安装Apache，MySQL和PHP.</p>
-<h2 id="第一步：下载命令行客户端"><a href="#第一步：下载命令行客户端" class="headerlink" title="第一步：下载命令行客户端"></a>第一步：下载命令行客户端</h2><p>由于Windows系统自带的命令行界面并不支持ssh命令，故需先下载一个命令行客户端，putty，Git都可。</p>
-<h2 id="第二步：登录VPS"><a href="#第二步：登录VPS" class="headerlink" title="第二步：登录VPS"></a>第二步：登录VPS</h2><p>打开命令行客户端，输入ssh root@SERVER_IP_ADDRESS, SERVER_IP_ADDRESS 是指你购买的VPS给你分配的IP，可以在VPS提供商的后台管理查到。然后再键入密码,服务商一般会发送root密码到邮箱，即可登录远程“电脑”。以下的所有操作都是在登录之后进行的。</p>
-<h2 id="第三步：安装Apache"><a href="#第三步：安装Apache" class="headerlink" title="第三步：安装Apache"></a>第三步：安装Apache</h2><p>Apache是一个免费、开源的网络服务器，键入如下两条命令安装Apache</p>
-<p>更新软件源</p>
-<pre><code>sudo apt-get update
-</code></pre><p>安装Apache</p>
-<pre><code>sudo apt-get install apache2
-</code></pre><p>安装完之后在浏览器地址栏键入你的IP地址，若出现，即表明安装成功。So easy!</p>
-<h2 id="第四步：安装MySQL"><a href="#第四步：安装MySQL" class="headerlink" title="第四步：安装MySQL"></a>第四步：安装MySQL</h2><p>MySQL也是一个免费、开源的数据库，继续在命令行键入如下命令</p>
-<p>安装MySQL和相关组件</p>
-<pre><code>sudo apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
-</code></pre><p>之后就会出现设置root密码，直接enter则密码为空</p>
-<h2 id="第五步：安装PHP"><a href="#第五步：安装PHP" class="headerlink" title="第五步：安装PHP"></a>第五步：安装PHP</h2><p>PHP是一门开源的网络脚本语言，通过如下命令安装PHP</p>
-<pre><code>sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt
-</code></pre><p>PHP还有许多的扩展模块，通过他们可以实现很多其他功能，极大增强了语言的可扩展性。</p>
-<h2 id="第六步：安装PHP扩展"><a href="#第六步：安装PHP扩展" class="headerlink" title="第六步：安装PHP扩展"></a>第六步：安装PHP扩展</h2><p>通过命令<code>apt-cache search php5-</code>可以搜索到所有模块，然后按需安装。</p>
-<pre><code>php5-cgi - server-side, HTML-embedded scripting language (CGI binary)
-php5-cli - command-line interpreter for the php5 scripting language
-php5-common - Common files for packages built from the php5 source
-php5-curl - CURL module for php5
-php5-dbg - Debug symbols for PHP5
-php5-dev - Files for PHP5 module development
-php5-gd - GD module for php5
-php5-gmp - GMP module for php5
-php5-ldap - LDAP module for php5
-php5-mysql - MySQL module for php5
-php5-odbc - ODBC module for php5
-php5-pgsql - PostgreSQL module for php5
-php5-pspell - pspell module for php5
-php5-recode - recode module for php5
-php5-snmp - SNMP module for php5
-php5-sqlite - SQLite module for php5
-php5-tidy - tidy module for php5
-php5-xmlrpc - XML-RPC module for php5
-php5-xsl - XSL module for php5
-php5-adodb - Extension optimising the ADOdb database abstraction library
-php5-auth-pam - A PHP5 extension for PAM authentication
-</code></pre><h2 id="第七步：查看phpinfo"><a href="#第七步：查看phpinfo" class="headerlink" title="第七步：查看phpinfo"></a>第七步：查看phpinfo</h2><pre><code>sudo nano /var/www/info.php
-</code></pre><p>添加如下代码</p>
-<pre><code>&lt;?php
-phpinfo();
-?&gt;
-</code></pre><p>保存后退出。重启服务器</p>
-<pre><code>sudo service apache2 restart
-</code></pre><p>在浏览器地址栏键入SERVER_IP_ADDRESS/info.php 查看是否为如下信息</p>
-<p>至此，LAMP环境基本搭建完毕。下面一节将讲如何配置虚拟主机。</p>
+        <p>  工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，Git应运而生。<br>  <br>首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不可取，工作是以漂亮完成任务为目的，深究原理会消耗大量工作时间。了解原理的事可以空闲时间琢磨，切不可因此耽搁项目进程。<br>  <br>前提是已经有安装好的的Git客户端。</p>
+<h2 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h2><p>提交代码时显示的用户名</p>
+<pre><code>git config --global user.name &quot;Apple&quot; 
+</code></pre><p>邮箱，默认为登录邮箱</p>
+<pre><code>git config --global user.email test@gmail.com 
+</code></pre><p>设置编辑器，下面是针对Windows下设置sublime text为默认编辑器</p>
+<pre><code>git config --global core.editor &quot;&apos;c:/user/sublime text 3.exe&apos; -w&quot;
+</code></pre><p>Git会为大部分的输出打出颜色，如果git diff时的不同颜色的输出有助于快速定位</p>
+<pre><code>git config --global color.ui true
+</code></pre><p>输入自动补全功能</p>
+<pre><code>git config --global core.autocrlf input
+</code></pre><h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH-Key"></a>配置SSH-Key</h2><p>许多Git服务器都是用SSH公钥进行验证。通过命令生成两个key，一个是public key填写在服务器端，一个是private，保存在本地。当客户端和服务端进行交流（如提交代码），服务端通过检测两个key是否匹配。</p>
+<ul>
+<li><p>本地通过命令<code>ssh-keygen</code> 生成SSH公钥,首先 ssh-keygen 会确认密钥的存储位置（默认是 .ssh/id_rsa），然后它会要求你输入两次密钥口令。如果你不想在使用密钥时输入口令，将其留空即可</p>
+</li>
+<li><p>复制 id_rsa.pub 中的内容,添加到<a href="https://github.com/settings/ssh" target="_blank" rel="external">github</a>/<a href="https://bitbucket.org/account/user/your-name/ssh-keys/" target="_blank" rel="external">bitbucket</a>中</p>
+</li>
+<li><p>测试成功与否 <code>ssh -T git@github.com</code>, 如果成功会有一段warning，yes即可</p>
+</li>
+</ul>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ul>
+<li><p><a href="https://git-scm.com/book/zh/v2/GitHub-%E8%B4%A6%E6%88%B7%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE" target="_blank" rel="external">GitHub - 账户的创建和配置</a></p>
+</li>
+<li><p><a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">Generating SSH keys</a></p>
+</li>
+</ul>
 
       
     </div>
@@ -379,6 +352,8 @@ phpinfo();
           
             <a href="/tags/技术/" rel="tag"># 技术</a>
           
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
         </div>
       
 
@@ -386,15 +361,15 @@ phpinfo();
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/16/Apache 不同版本配置差异/" rel="next" title="Apache 不同版本配置差异">
+                <i class="fa fa-chevron-left"></i> Apache 不同版本配置差异
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" rel="prev" title="从零开始建站(二)--VirtualHost的配置">
-                从零开始建站(二)--VirtualHost的配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -510,7 +485,7 @@ phpinfo();
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于VPS"><span class="nav-number">1.</span> <span class="nav-text">关于VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于LAMP"><span class="nav-number">2.</span> <span class="nav-text">关于LAMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：下载命令行客户端"><span class="nav-number">3.</span> <span class="nav-text">第一步：下载命令行客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：登录VPS"><span class="nav-number">4.</span> <span class="nav-text">第二步：登录VPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：安装Apache"><span class="nav-number">5.</span> <span class="nav-text">第三步：安装Apache</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步：安装MySQL"><span class="nav-number">6.</span> <span class="nav-text">第四步：安装MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五步：安装PHP"><span class="nav-number">7.</span> <span class="nav-text">第五步：安装PHP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六步：安装PHP扩展"><span class="nav-number">8.</span> <span class="nav-text">第六步：安装PHP扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七步：查看phpinfo"><span class="nav-number">9.</span> <span class="nav-text">第七步：查看phpinfo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局设置"><span class="nav-number">1.</span> <span class="nav-text">全局设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH-Key"><span class="nav-number">2.</span> <span class="nav-text">配置SSH-Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">3.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
