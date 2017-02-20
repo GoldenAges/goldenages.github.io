@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="Git,工具," />
 
 
 
@@ -58,19 +58,16 @@
 
 
 
-<meta name="description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
+<meta name="description" content="前言&amp;emsp;&amp;emsp;通过前面配置，Git 已经">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache 不同版本配置差异">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/index.html">
+<meta property="og:title" content="Git基础(二)--一次完整的工作流">
+<meta property="og:url" content="http://yoursite.com/2017/02/17/Git基础(二)--一次完整的工作流/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
-<meta property="og:updated_time" content="2017-02-20T02:18:52.000Z">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;通过前面配置，Git 已经">
+<meta property="og:updated_time" content="2017-02-20T02:50:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Apache 不同版本配置差异">
-<meta name="twitter:description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
+<meta name="twitter:title" content="Git基础(二)--一次完整的工作流">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;通过前面配置，Git 已经">
 
 
 
@@ -98,13 +95,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/17/Git基础(二)--一次完整的工作流/"/>
 
 
 
 
 
-  <title> Apache 不同版本配置差异 | Golden Era's Blog </title>
+  <title> Git基础(二)--一次完整的工作流 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +232,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/17/Git基础(二)--一次完整的工作流/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -259,7 +256,7 @@
             
             
               
-                Apache 不同版本配置差异
+                Git基础(二)--一次完整的工作流
               
             
           </h2>
@@ -274,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:12:10+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-17T10:13:57+08:00">
+                2017-02-17
               </time>
             
 
@@ -290,7 +287,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:52+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:50:24+08:00">
                 2017-02-20
               </time>
             
@@ -327,27 +324,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。</p>
-<p>所以寻找问题的思路很重要，应该是查看报错信息 -&gt; 查看错误日记 -&gt; Google -&gt; 官方文档 -&gt; 求助他人，而不是一股脑的就把错误信息copy到搜索引擎中去，这样可能会浪费大量的时间。</p>
-<p>下面描述的均是从2.2和2.4配置不同之处，如果是从2.0和2.2，请看参考</p>
-<h2 id="访问权限的配置"><a href="#访问权限的配置" class="headerlink" title="访问权限的配置"></a>访问权限的配置</h2><ul>
-<li><p>拒绝所有访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order deny,allow</div><div class="line">Deny from all</div><div class="line">#2.4 configuration</div><div class="line">Require all denied</div></pre></td></tr></table></figure>
-</li>
-<li><p>允许有来源访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order allow,deny</div><div class="line">Allow from all</div><div class="line">#2.4 configuration</div><div class="line">Require all granted</div></pre></td></tr></table></figure>
-</li>
-<li><p>仅允许特定域名访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order Deny,Allow</div><div class="line">Deny from all</div><div class="line">Allow from example.org</div><div class="line">#2.4 configuration</div><div class="line">Require host example.org</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="Keep-alive参数"><a href="#Keep-alive参数" class="headerlink" title="Keep-alive参数"></a><a href="https://en.wikipedia.org/wiki/Keepalive" target="_blank" rel="external">Keep-alive</a>参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2.2 除了 ‘Off’ 和 ‘0’ 之外的所有值都被当作是 ‘On’</div><div class="line">2.4 仅允许 ‘On’ 或 ‘Off’</div></pre></td></tr></table></figure>
-<p>这里只是列出了两个比较常见的配置，更多请参考官方文档。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="http://httpd.apache.org/docs/2.2/upgrading.html" target="_blank" rel="external">2.0 to 2.2 upgrading document</a></li>
-<li><a href="https://www.v2ex.com/go/apache" target="_blank" rel="external">V2EX的Apache节点</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Keepalive" target="_blank" rel="external">keep-alive参数详解</a></li>
-</ol>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;通过前面配置，Git 已经</p>
 
       
     </div>
@@ -371,7 +348,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/技术/" rel="tag"># 技术</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
         </div>
       
@@ -380,8 +359,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" rel="next" title="从零开始建站(三)--增强VPS的安全性">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(三)--增强VPS的安全性
+              <a href="/2017/02/16/编码、摘要、加密的区别/" rel="next" title="编码、摘要、加密的区别">
+                <i class="fa fa-chevron-left"></i> 编码、摘要、加密的区别
               </a>
             
           </div>
@@ -389,10 +368,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/Git基础(一)--配置SSH-Key/" rel="prev" title="Git基础(一)--配置SSH-Key">
-                Git基础(一)--配置SSH-Key <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -508,7 +483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问权限的配置"><span class="nav-number">2.</span> <span class="nav-text">访问权限的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keep-alive参数"><span class="nav-number">3.</span> <span class="nav-text">Keep-alive参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
             
 
           </div>
