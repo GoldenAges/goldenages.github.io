@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="Git,技术,工具," />
 
 
 
@@ -58,25 +58,16 @@
 
 
 
-<meta name="description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
+<meta name="description" content="前言  工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，如何记录每一次更改？如何在不更改源代码基础上开发一个新功能？如何做回滚？等等……这时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/index.html">
+<meta property="og:title" content="Git基础(一)--配置SSH-Key">
+<meta property="og:url" content="http://yoursite.com/2017/02/16/Git基础(一)--配置SSH-Key/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
-<meta property="og:updated_time" content="2017-02-20T02:18:54.000Z">
+<meta property="og:description" content="前言  工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，如何记录每一次更改？如何在不更改源代码基础上开发一个新功能？如何做回滚？等等……这时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不">
+<meta property="og:updated_time" content="2017-02-20T02:18:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta name="twitter:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
+<meta name="twitter:title" content="Git基础(一)--配置SSH-Key">
+<meta name="twitter:description" content="前言  工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，如何记录每一次更改？如何在不更改源代码基础上开发一个新功能？如何做回滚？等等……这时候，Git应运而生。  首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不">
 
 
 
@@ -104,13 +95,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/16/Git基础(一)--配置SSH-Key/"/>
 
 
 
 
 
-  <title> 从零开始建站(三)--增强VPS的安全性 | Golden Era's Blog </title>
+  <title> Git基础(一)--配置SSH-Key | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +232,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/Git基础(一)--配置SSH-Key/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -265,7 +256,7 @@
             
             
               
-                从零开始建站(三)--增强VPS的安全性
+                Git基础(一)--配置SSH-Key
               
             
           </h2>
@@ -280,7 +271,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:51:20+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:24:44+08:00">
                 2017-02-16
               </time>
             
@@ -296,7 +287,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:51+08:00">
                 2017-02-20
               </time>
             
@@ -333,21 +324,40 @@
       
 
       
-        <p>当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。<br>默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。</p>
-<h2 id="第一步：添加新用户，然后设置密码"><a href="#第一步：添加新用户，然后设置密码" class="headerlink" title="第一步：添加新用户，然后设置密码"></a>第一步：添加新用户，然后设置密码</h2><p>adduser username</p>
-<h3 id="授予root权限"><a href="#授予root权限" class="headerlink" title="授予root权限"></a>授予root权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure>
-<h2 id="第二步：禁止远程root登陆，修改默认端口"><a href="#第二步：禁止远程root登陆，修改默认端口" class="headerlink" title="第二步：禁止远程root登陆，修改默认端口"></a>第二步：禁止远程root登陆，修改默认端口</h2><p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
-<h3 id="第三步：使改变生效"><a href="#第三步：使改变生效" class="headerlink" title="第三步：使改变生效"></a>第三步：使改变生效</h3><h3 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh restart</div></pre></td></tr></table></figure>
-<p>重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。</p>
-<p>第四步：使用更加安全的 <code>ssh_key</code> 来登陆</p>
-<p>这一步不是必需的，只是为了方便和进一步增强安全性。配置ssh_keys之后，当你使用自己的电脑就不用输入密码。<br>ssh_key 的生成很简单 ，本地输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
-<p>这条命令会在 ～/.ssh/ 目录下生成 id_rsa 和 id_rsa.pub，即私钥和公钥。再在本地命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id apple@SERVER_IP_ADDRESS</div></pre></td></tr></table></figure></p>
-<p>，然后键入密码，这时就会将本地的公钥添加至服务器 ~/.ssh/authorized_keys 里，里面的内容就是已通过认证的公钥，当你使用这些客户端登录时，就不用输入密码<br>至此，你的服务器几乎能避免绝大多数攻击，如果要进一步增加安全性，则可向着如下方向改进：</p>
-<p>仅使用 ssh_key 登录，禁止普通用户登录<br>增加防火墙设置，将多次尝试登录的IP地址加入黑名单<br>添加安全证书的验证</p>
-<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
-<li><a href="https://www.v2ex.com/t/211641" target="_blank" rel="external">一些增强 SSH 安全性的技巧</a></li>
-<li><a href="https://www.linux.com/learn/tutorials/305769-advanced-ssh-security-tips-and-tricks" target="_blank" rel="external">Advanced SSH security tips and tricks</a></li>
-</ol>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  工欲先善其事，必先利其器。在工作之中，得心应手的工具能让你更多的专注于工作本身，提高效率。在编写程序方面，如何管理代码一直是一个很令人头痛的问题。尤其是代码规模越来越大的时候，如何记录每一次更改？如何在不更改源代码基础上开发一个新功能？如何做回滚？等等……这时候，Git应运而生。<br>  <br>首先，需纠正很多人，包括我从学校过度到工作之后的一个想法，就是无论做什么都必须先了解原理。这种想法在工作中不可取，工作是以优先完成任务为目的，深究原理会消耗大量工作时间。了解原理可以在空闲时间琢磨，切不可因此耽搁进程。</p>
+<h2 id="Git和GitHub的区别"><a href="#Git和GitHub的区别" class="headerlink" title="Git和GitHub的区别"></a>Git和GitHub的区别</h2><p>关于Git和Github的区别，一句话以概之。Git是一个开源代码版本管理工具，GitHub是基于该工具做的一个项目托管平台，和Github功能类似的还有<a href="https://bitbucket.org/product" target="_blank" rel="external">Bitbucket</a>、<a href="https://coding.net/" target="_blank" rel="external">Coding</a>，它们使用的工具都是Git，只是各自提供一些特色功能，如权限管理、issue提交、Group管理等。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>客户端大致分为两类，图形化客户端和命令行。图形化客户端口碑较好的有<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a>，不过还是建议在命令行进行操作，这样对Git的原理能有一个更好的了解。参考里有下载方式。</p>
+<h2 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h2><p>提交代码时显示的用户名</p>
+<pre><code>git config --global user.name &quot;Apple&quot; 
+</code></pre><p>邮箱，默认为登录邮箱</p>
+<pre><code>git config --global user.email test@gmail.com 
+</code></pre><p>设置编辑器，下面是针对Windows下设置sublime text为默认编辑器</p>
+<pre><code>git config --global core.editor &quot;&apos;c:/user/sublime text 3.exe&apos; -w&quot;
+</code></pre><p>Git会为大部分的输出打出颜色，如果git diff时的不同颜色的输出有助于快速定位</p>
+<pre><code>git config --global color.ui true
+</code></pre><p>输入自动补全功能</p>
+<pre><code>git config --global core.autocrlf input
+</code></pre><h2 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH-Key"></a>配置SSH-Key</h2><p>许多Git服务器都是用SSH公钥进行验证。通过命令生成两个key，一个是public key填写在服务器端，一个是private，保存在本地。当客户端和服务端进行交流（如提交代码），服务端通过检测两个key是否匹配。</p>
+<ul>
+<li><p>本地通过命令<code>ssh-keygen</code> 生成SSH公钥,首先 ssh-keygen 会确认密钥的存储位置（默认是 .ssh/id_rsa），然后它会要求你输入两次密钥口令。如果你不想在使用密钥时输入口令，将其留空即可</p>
+</li>
+<li><p>复制 id_rsa.pub 中的内容,添加到<a href="https://github.com/settings/ssh" target="_blank" rel="external">github</a>/<a href="https://bitbucket.org/account/user/your-name/ssh-keys/" target="_blank" rel="external">bitbucket</a>中</p>
+</li>
+<li><p>测试成功与否 <code>ssh -T git@github.com</code>, 如果成功会有一段warning，yes即可</p>
+</li>
+</ul>
+<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ul>
+<li><p><a href="https://www.zhihu.com/question/21907548" target="_blank" rel="external">Git跟Github是什么关系</a></p>
+</li>
+<li><p><a href="https://git-scm.com/book/zh/v2/GitHub-%E8%B4%A6%E6%88%B7%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E9%85%8D%E7%BD%AE" target="_blank" rel="external">GitHub - 账户的创建和配置</a></p>
+</li>
+<li><p><a href="https://git-scm.com/downloads" target="_blank" rel="external">Git命令行下载</a></p>
+</li>
+<li><p><a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree下载</a></p>
+</li>
+<li><p><a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">Generating SSH keys</a></p>
+</li>
+</ul>
 
       
     </div>
@@ -371,7 +381,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/Git/" rel="tag"># Git</a>
+          
             <a href="/tags/技术/" rel="tag"># 技术</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
           
         </div>
       
@@ -380,8 +394,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" rel="next" title="从零开始建站(二)--VirtualHost的配置">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(二)--VirtualHost的配置
+              <a href="/2017/02/16/Apache 不同版本配置差异/" rel="next" title="Apache 不同版本配置差异">
+                <i class="fa fa-chevron-left"></i> Apache 不同版本配置差异
               </a>
             
           </div>
@@ -390,8 +404,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/16/Apache 不同版本配置差异/" rel="prev" title="Apache 不同版本配置差异">
-                Apache 不同版本配置差异 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/16/编码、摘要、加密的区别/" rel="prev" title="编码、摘要、加密的区别">
+                编码、摘要、加密的区别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -508,7 +522,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：添加新用户，然后设置密码"><span class="nav-number">1.</span> <span class="nav-text">第一步：添加新用户，然后设置密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#授予root权限"><span class="nav-number">1.1.</span> <span class="nav-text">授予root权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：禁止远程root登陆，修改默认端口"><span class="nav-number">2.</span> <span class="nav-text">第二步：禁止远程root登陆，修改默认端口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：使改变生效"><span class="nav-number">2.1.</span> <span class="nav-text">第三步：使改变生效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启ssh服务"><span class="nav-number">2.2.</span> <span class="nav-text">重启ssh服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">3.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git和GitHub的区别"><span class="nav-number">2.</span> <span class="nav-text">Git和GitHub的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局设置"><span class="nav-number">4.</span> <span class="nav-text">全局设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置SSH-Key"><span class="nav-number">5.</span> <span class="nav-text">配置SSH-Key</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">6.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
