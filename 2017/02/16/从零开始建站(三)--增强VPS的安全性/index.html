@@ -59,24 +59,21 @@
 
 
 <meta name="description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
+第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始建站(三)--增强VPS的安全性">
 <meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
 <meta property="og:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
-<meta property="og:updated_time" content="2017-02-20T02:18:54.000Z">
+第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
+<meta property="og:updated_time" content="2017-02-22T06:58:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始建站(三)--增强VPS的安全性">
 <meta name="twitter:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码adduser username
-授予root权限1gpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口既然已经有">
+第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
+第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
 
 
 
@@ -296,8 +293,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:54+08:00">
-                2017-02-20
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-22T14:58:20+08:00">
+                2017-02-22
               </time>
             
           </span>
@@ -334,10 +331,11 @@
 
       
         <p>当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。<br>默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。</p>
-<h2 id="第一步：添加新用户，然后设置密码"><a href="#第一步：添加新用户，然后设置密码" class="headerlink" title="第一步：添加新用户，然后设置密码"></a>第一步：添加新用户，然后设置密码</h2><p>adduser username</p>
-<h3 id="授予root权限"><a href="#授予root权限" class="headerlink" title="授予root权限"></a>授予root权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure>
-<h2 id="第二步：禁止远程root登陆，修改默认端口"><a href="#第二步：禁止远程root登陆，修改默认端口" class="headerlink" title="第二步：禁止远程root登陆，修改默认端口"></a>第二步：禁止远程root登陆，修改默认端口</h2><p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
-<h3 id="第三步：使改变生效"><a href="#第三步：使改变生效" class="headerlink" title="第三步：使改变生效"></a>第三步：使改变生效</h3><h3 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service ssh restart</div></pre></td></tr></table></figure>
+<h2 id="第一步：添加新用户，然后设置密码"><a href="#第一步：添加新用户，然后设置密码" class="headerlink" title="第一步：添加新用户，然后设置密码"></a>第一步：添加新用户，然后设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adduser apple</div><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure>
+<h2 id="第二步：禁止远程root登陆，修改默认端口，限制登陆次数"><a href="#第二步：禁止远程root登陆，修改默认端口，限制登陆次数" class="headerlink" title="第二步：禁止远程root登陆，修改默认端口，限制登陆次数"></a>第二步：禁止远程root登陆，修改默认端口，限制登陆次数</h2><p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 默认登陆端口</div><div class="line">Port 2334</div><div class="line"># 限制登陆次数</div><div class="line">MaxAuthTries 10</div></pre></td></tr></table></figure>
+<p>当然，还有更有效的工具，<a href="https://www.fail2ban.org/" target="_blank" rel="external">Fail2Ban</a>，相关介绍和使用会在接下来的文章中介绍。</p>
+<h2 id="第三步：使改变生效"><a href="#第三步：使改变生效" class="headerlink" title="第三步：使改变生效"></a>第三步：使改变生效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 重启ssh服务</div><div class="line">sudo service ssh restart</div></pre></td></tr></table></figure>
 <p>重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。</p>
 <p>第四步：使用更加安全的 <code>ssh_key</code> 来登陆</p>
 <p>这一步不是必需的，只是为了方便和进一步增强安全性。配置ssh_keys之后，当你使用自己的电脑就不用输入密码。<br>ssh_key 的生成很简单 ，本地输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
@@ -508,7 +506,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：添加新用户，然后设置密码"><span class="nav-number">1.</span> <span class="nav-text">第一步：添加新用户，然后设置密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#授予root权限"><span class="nav-number">1.1.</span> <span class="nav-text">授予root权限</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：禁止远程root登陆，修改默认端口"><span class="nav-number">2.</span> <span class="nav-text">第二步：禁止远程root登陆，修改默认端口</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：使改变生效"><span class="nav-number">2.1.</span> <span class="nav-text">第三步：使改变生效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启ssh服务"><span class="nav-number">2.2.</span> <span class="nav-text">重启ssh服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">3.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：添加新用户，然后设置密码"><span class="nav-number">1.</span> <span class="nav-text">第一步：添加新用户，然后设置密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：禁止远程root登陆，修改默认端口，限制登陆次数"><span class="nav-number">2.</span> <span class="nav-text">第二步：禁止远程root登陆，修改默认端口，限制登陆次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：使改变生效"><span class="nav-number">3.</span> <span class="nav-text">第三步：使改变生效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">4.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
 
           </div>
