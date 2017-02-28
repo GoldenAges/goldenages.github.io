@@ -75,7 +75,7 @@ Git 区域划分先看一张图这张图很清晰明了">
 <meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-102833.jpg">
 <meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-103340.jpg">
 <meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-103515.jpg">
-<meta property="og:updated_time" content="2017-02-23T11:35:29.000Z">
+<meta property="og:updated_time" content="2017-02-24T02:10:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git基础(二)--常见撤销操作">
 <meta name="twitter:description" content="前言Git 的安装以及基本配置已在前一节写了，现在你已经正式可以开始使用了。正如在 Word 操作中最常用到的是 Ctrl+Z一样，在 Git 中，你也可能经常需要撤销操作，在此之前，先得明白 Git 几个常见的概念，Git 的区域划分。然后，了解一次最常见的工作流是如何操作的，了解经过操作后文件会的状态如何，会在哪个区域，最后才学习如何撤销每一步操作。
@@ -300,8 +300,8 @@ Git 区域划分先看一张图这张图很清晰明了">
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-23T19:35:29+08:00">
-                2017-02-23
+              <time title="更新于" itemprop="dateModified" datetime="2017-02-24T10:10:58+08:00">
+                2017-02-24
               </time>
             
           </span>
@@ -367,14 +367,16 @@ Git 区域划分先看一张图这张图很清晰明了">
 </code></pre><h3 id="第五步：-提交到服务器"><a href="#第五步：-提交到服务器" class="headerlink" title="第五步： 提交到服务器"></a>第五步： 提交到服务器</h3><pre><code>git push -u origin master
 </code></pre><p><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-102619.jpg" alt=""></p>
 <p>这里暂时没有提到多人协同工作时常见的 conflict(冲突) 问题以及开发新功能用到的分支，不用着急，Git 分支也会在接下来的文章中介绍。</p>
-<h2 id="每个步骤如何撤销"><a href="#每个步骤如何撤销" class="headerlink" title="每个步骤如何撤销"></a>每个步骤如何撤销</h2><h3 id="撤销工作区文件"><a href="#撤销工作区文件" class="headerlink" title="撤销工作区文件"></a>撤销工作区文件</h3><pre><code>`git checkout filename`
+<h2 id="每个步骤如何撤销"><a href="#每个步骤如何撤销" class="headerlink" title="每个步骤如何撤销"></a>每个步骤如何撤销</h2><h3 id="撤销工作区文件"><a href="#撤销工作区文件" class="headerlink" title="撤销工作区文件"></a>撤销工作区文件</h3><pre><code>git checkout filename
 </code></pre><p><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-102939.jpg" alt=""></p>
 <h3 id="撤销暂存区文件至工作区"><a href="#撤销暂存区文件至工作区" class="headerlink" title="撤销暂存区文件至工作区"></a>撤销暂存区文件至工作区</h3><pre><code>git reset filename
 </code></pre><p><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-102833.jpg" alt=""></p>
 <h3 id="撤销本地仓库的某次至工作区"><a href="#撤销本地仓库的某次至工作区" class="headerlink" title="撤销本地仓库的某次至工作区"></a>撤销本地仓库的某次至工作区</h3><pre><code>git reset commit
 </code></pre><p><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-103340.jpg" alt=""><br>可以通过  <code>git log</code> 和 <code>git reflog</code> 查看最近的 commit，找到最近的那次提交，然后通过 reset 命令撤销该操作<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-02-23-103515.jpg" alt=""></p>
 <p>上面有的操作对象是文件，有的是 commit，为什么呢？先弄清一点，把缓存区的文件（一个或多个文件）提交到本地仓库之后，Git 就会以某种识别码的形式来记录这次提交，这个识别码是 <strong>独一无二</strong>的。所以只要是提交到本地仓库后，操作对象就由文件变为 commit.</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>了解了基本的工作流和常见的撤销操作之后，再加上接下来介绍的分支操作，基本上就覆盖了日常大部分使用场景。如果能再了解下 Git 的工作原理，想必学习起 Git 来是事半功倍的。<br>想当时学习 Git 走了不要弯路，总是一股脑的把错误信息扔到搜索引擎，然后按照搜来的结果“不知其所以然”的贴到命令行，运气好的时候，问题会被解决（没有报错），运气不好，会接二连三的报错，这时就陷入了恶性循环，到最后，你都不知道最初的问题是什么了。所以，在学习 Git 的操作同时，也要了解 Git 的原理，结合 Git 自带的提示/报错信息，大部分错误都基本上可以很快的解决。<br>当遇到实在解决不了的问题时，恭喜你，你变强了！</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>了解了基本的工作流和常见的撤销操作之后，再加上接下来介绍的分支操作，基本上就覆盖了日常大部分使用场景。如果能再了解下 Git 的工作原理，想必学习起 Git 来是事半功倍的。</p>
+<p>想当时学习 Git 走了不要弯路，总是一股脑的把错误信息扔到搜索引擎，然后按照搜来的结果“不知其所以然”的贴到命令行，运气好的时候，问题会被解决（没有报错），运气不好，会接二连三的报错，这时就陷入了恶性循环，到最后，你都不知道最初的问题是什么了。所以，在学习 Git 的操作同时，也要了解 Git 的原理，结合 Git 自带的提示/报错信息，大部分错误都基本上可以很快的解决。</p>
+<p>当遇到实在解决不了的问题时，恭喜你，你变强了！</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-Git-%E7%AE%80%E5%8F%B2" target="_blank" rel="external">Git 简史</a></li>
 <li><a href="https://git-scm.com/book/zh/v1/Git-%E5%9F%BA%E7%A1%80-%E6%92%A4%E6%B6%88%E6%93%8D%E4%BD%9C" target="_blank" rel="external">Git 基础 - 撤消操作</a></li>
@@ -422,6 +424,10 @@ Git 区域划分先看一张图这张图很清晰明了">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/28/如何设计图片表/" rel="prev" title="如何设计图片表">
+                如何设计图片表 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -495,7 +501,7 @@ Git 区域划分先看一张图这张图很清晰明了">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -506,7 +512,7 @@ Git 区域划分先看一张图这张图很清晰明了">
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
