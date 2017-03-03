@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -58,19 +58,19 @@
 
 
 
-<meta name="description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
+<meta name="description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Apache 不同版本配置差异">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/index.html">
+<meta property="og:title" content="Git基础(三)--常见错误及解决方案">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/Git-常见错误及解决方案/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
-<meta property="og:updated_time" content="2017-02-20T02:18:52.000Z">
+<meta property="og:description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
+<meta property="og:updated_time" content="2017-03-03T08:19:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Apache 不同版本配置差异">
-<meta name="twitter:description" content="前言LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。
-所以寻找问题的思路很重要，应该是查看报错信息 -&amp;gt; 查看错误日记 -&amp;gt; Google -&amp;gt; 官方文档 -&amp;gt; 求">
+<meta name="twitter:title" content="Git基础(三)--常见错误及解决方案">
+<meta name="twitter:description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
 
 
 
@@ -98,13 +98,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/03/Git-常见错误及解决方案/"/>
 
 
 
 
 
-  <title> Apache 不同版本配置差异 | Golden Era's Blog </title>
+  <title> Git基础(三)--常见错误及解决方案 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +235,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/Git-常见错误及解决方案/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -259,7 +259,7 @@
             
             
               
-                Apache 不同版本配置差异
+                Git基础(三)--常见错误及解决方案
               
             
           </h2>
@@ -274,8 +274,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:12:10+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T14:53:14+08:00">
+                2017-03-03
               </time>
             
 
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:52+08:00">
-                2017-02-20
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-03T16:19:04+08:00">
+                2017-03-03
               </time>
             
           </span>
@@ -305,8 +305,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/Apache 不同版本配置差异/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/Apache 不同版本配置差异/" itemprop="commentCount"></span>
+                <a href="/2017/03/03/Git-常见错误及解决方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/Git-常见错误及解决方案/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -337,27 +337,32 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>LAMP和WAMP的配置，网上已经有很多很详细的教程了，在此不再赘述。只是在配置Apache时有一点需要注意一下——不同版本的Apache配置不同。我在网上找到的大多中文教程都没有说到上面这一点，结果在因为版本的问题折腾了许久，最后终于从官方文档中找到了答案。</p>
-<p>所以寻找问题的思路很重要，应该是查看报错信息 -&gt; 查看错误日记 -&gt; Google -&gt; 官方文档 -&gt; 求助他人，而不是一股脑的就把错误信息copy到搜索引擎中去，这样可能会浪费大量的时间。</p>
-<p>下面描述的均是从2.2和2.4配置不同之处，如果是从2.0和2.2，请看参考</p>
-<h2 id="访问权限的配置"><a href="#访问权限的配置" class="headerlink" title="访问权限的配置"></a>访问权限的配置</h2><ul>
-<li><p>拒绝所有访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order deny,allow</div><div class="line">Deny from all</div><div class="line">#2.4 configuration</div><div class="line">Require all denied</div></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。</p>
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><h3 id="You-have-unmerged-files"><a href="#You-have-unmerged-files" class="headerlink" title="You have unmerged files"></a>You have unmerged files</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">You have unmerged paths.</div><div class="line">(fix conflicts and run &quot;git commit&quot;)</div><div class="line">Unmerged paths:</div><div class="line">(use &quot;git add &lt;file&gt;...&quot; to mark resolution)</div><div class="line">both modified:      index.html</div><div class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</div></pre></td></tr></table></figure>
+<p>原因：见上面conflict的原因<br>解决方案：查看发生冲突的文件，手动修改后commit，通过 <code>git mergetool</code> 可以看到图形化的界面，便于直观的理解。<br>参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank" rel="external">Git 分支 - 分支的新建与合并</a></p>
+<h3 id="add操作-warning"><a href="#add操作-warning" class="headerlink" title="add操作 warning"></a>add操作 warning</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add -A</div><div class="line">warning: LF will be replaced by CRLF in file</div><div class="line">The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure>
+<p>原因：Linux平台下的换行符是 LF，而Windows下则是 CRLF，所以当你再 Windows 保存文件时候，换行符会被保存为<br>建议：统一换行符为 LF<br>方案：<br>Git 命令行输入如下命令，禁止自动转换换行符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global core.autocrlf false</div></pre></td></tr></table></figure></p>
+<p>Sulime Text下的用户自定义增加以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;default_line_ending&quot;: &quot;unix&quot;,  </div><div class="line">&quot;trim_trailing_white_space_on_save&quot;: true,</div><div class="line">&quot;ensure_newline_at_eof_on_save&quot;: true,</div></pre></td></tr></table></figure></p>
+<h3 id="pull-失败"><a href="#pull-失败" class="headerlink" title="pull 失败"></a>pull 失败</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">You have not concluded your merge (MERGE_HEAD exists).</div><div class="line">Please, commit your changes before you can merge.</div></pre></td></tr></table></figure>
+<p>原因：之前进行 Pull 操作时自动合并失败，和原文件有冲突<br>解决方案：取消 Pull 操作然后手动合并</p>
+<ul>
+<li><p>取消合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git merge --abort</div><div class="line">git reset --merge</div></pre></td></tr></table></figure>
 </li>
-<li><p>允许有来源访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order allow,deny</div><div class="line">Allow from all</div><div class="line">#2.4 configuration</div><div class="line">Require all granted</div></pre></td></tr></table></figure>
+<li><p>解决冲突</p>
 </li>
-<li><p>仅允许特定域名访问</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#2.2 configuration:</div><div class="line">Order Deny,Allow</div><div class="line">Deny from all</div><div class="line">Allow from example.org</div><div class="line">#2.4 configuration</div><div class="line">Require host example.org</div></pre></td></tr></table></figure>
-</li>
+<li>重新 add and commit</li>
+<li>拉取分支然后合并，<code>git pull</code></li>
 </ul>
-<h2 id="Keep-alive参数"><a href="#Keep-alive参数" class="headerlink" title="Keep-alive参数"></a><a href="https://en.wikipedia.org/wiki/Keepalive" target="_blank" rel="external">Keep-alive</a>参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">2.2 除了 ‘Off’ 和 ‘0’ 之外的所有值都被当作是 ‘On’</div><div class="line">2.4 仅允许 ‘On’ 或 ‘Off’</div></pre></td></tr></table></figure>
-<p>这里只是列出了两个比较常见的配置，更多请参考官方文档。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="http://httpd.apache.org/docs/2.2/upgrading.html" target="_blank" rel="external">2.0 to 2.2 upgrading document</a></li>
-<li><a href="https://www.v2ex.com/go/apache" target="_blank" rel="external">V2EX的Apache节点</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Keepalive" target="_blank" rel="external">keep-alive参数详解</a></li>
-</ol>
+<p>参考：<a href="http://stackoverflow.com/questions/11646107/you-have-not-concluded-your-merge-merge-head-exists" target="_blank" rel="external">You have not concluded your merge (MERGE_HEAD exists)</a>   </p>
+<h3 id="push-error-failed-to-push-some-refs-to-‘’"><a href="#push-error-failed-to-push-some-refs-to-‘’" class="headerlink" title="push error: failed to push some refs to ‘’"></a>push error: failed to push some refs to ‘’</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git push origin master</div><div class="line">To john@githost:simplegit.git</div><div class="line">! [rejected] master -&gt; master (non-fast forward)</div><div class="line">error: failed to push some refs to &apos;john@githost:simplegit.git&apos;</div></pre></td></tr></table></figure>
+<p>原因：之前有人进行过提交，本地项目并不是最新的，在提交之前，必须合并当前分支至最新<br>解决方案：<code>git merge origin/master</code>，当你直接在master分支的时候，可以<code>git pull</code>，相当于<code>git fetch + git merge</code><br>参考：<a href="https://git-scm.com/book/zh/v2/%E5%88%86%E5%B8%83%E5%BC%8F-Git-%E5%90%91%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E8%B4%A1%E7%8C%AE" target="_blank" rel="external">分布式 Git - 向一个项目贡献</a></p>
+<h3 id="checkout-Unable-to-create-‘-path-project-git-index-lock’"><a href="#checkout-Unable-to-create-‘-path-project-git-index-lock’" class="headerlink" title="checkout : Unable to create ‘/path/project/.git/index.lock’"></a>checkout : Unable to create ‘/path/project/.git/index.lock’</h3><p>报错信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Git - fatal: Unable to create &apos;/path/my_project/.git/index.lock&apos;: File exists.</div></pre></td></tr></table></figure></p>
+<p>解决方案：<code>rm -f ./.git/index.lock</code><br>参考资料：<a href="http://stackoverflow.com/questions/7860751/git-fatal-unable-to-create-path-my-project-git-index-lock-file-exists" target="_blank" rel="external">stack参考</a></p>
+<h3 id="其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted"><a href="#其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted" class="headerlink" title="其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted"></a>其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted</h3><p>find the sha and delete it<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm .git/object/0f/fe69</div></pre></td></tr></table></figure></p>
+<p>then you will get this error<br>error: fatal: bad object HEAD<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch origin </div><div class="line">git reset --hard origin/master</div></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>可以看到，每次错误信息出现，Git 都会有很详细的提示，有些时候还会有原因解释以及基本的建议解决方案。所以，不要一出错就复制错误信息到网上取搜索，然后复制一些你自己也不知道有什么作用的命令，有时候甚至会酿成大祸（有一次就删除了许多图片然后push到了服务器，幸亏有备份）。</p>
+<p>退一步讲，如果你要复制网络上的命令，有一条准则谨记，<strong>任何命令中带有 –hard 参数的都谨慎执行</strong>，很有可能造成不可逆的损失。</p>
 
       
     </div>
@@ -381,7 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/技术/" rel="tag"># 技术</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -390,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" rel="next" title="从零开始建站(三)--增强VPS的安全性">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(三)--增强VPS的安全性
+              <a href="/2017/02/28/如何设计图片表/" rel="next" title="如何设计图片表">
+                <i class="fa fa-chevron-left"></i> 如何设计图片表
               </a>
             
           </div>
@@ -399,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/Git基础(一)--配置SSH-Key/" rel="prev" title="Git基础(一)--安装和配置SSH-Key">
-                Git基础(一)--安装和配置SSH-Key <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -428,8 +429,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/Apache 不同版本配置差异/"
-           data-title="Apache 不同版本配置差异" data-url="http://yoursite.com/2017/02/16/Apache 不同版本配置差异/">
+      <div class="ds-thread" data-thread-key="2017/03/03/Git-常见错误及解决方案/"
+           data-title="Git基础(三)--常见错误及解决方案" data-url="http://yoursite.com/2017/03/03/Git-常见错误及解决方案/">
       </div>
     
   </div>
@@ -533,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问权限的配置"><span class="nav-number">2.</span> <span class="nav-text">访问权限的配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keep-alive参数"><span class="nav-number">3.</span> <span class="nav-text">Keep-alive参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见错误"><span class="nav-number">2.</span> <span class="nav-text">常见错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#You-have-unmerged-files"><span class="nav-number">2.1.</span> <span class="nav-text">You have unmerged files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add操作-warning"><span class="nav-number">2.2.</span> <span class="nav-text">add操作 warning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-失败"><span class="nav-number">2.3.</span> <span class="nav-text">pull 失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#push-error-failed-to-push-some-refs-to-‘’"><span class="nav-number">2.4.</span> <span class="nav-text">push error: failed to push some refs to ‘’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checkout-Unable-to-create-‘-path-project-git-index-lock’"><span class="nav-number">2.5.</span> <span class="nav-text">checkout : Unable to create ‘/path/project/.git/index.lock’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted"><span class="nav-number">2.6.</span> <span class="nav-text">其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
