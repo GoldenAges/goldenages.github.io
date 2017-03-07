@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="vps,安全,技术," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -58,22 +58,19 @@
 
 
 
-<meta name="description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
+<meta name="description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/index.html">
+<meta property="og:title" content="Git基础(三)--常见错误及解决方案">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/Git基础(三)--常见错误及解决方案/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
-<meta property="og:updated_time" content="2017-02-22T07:00:17.000Z">
+<meta property="og:description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
+<meta property="og:updated_time" content="2017-03-07T02:34:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(三)--增强VPS的安全性">
-<meta name="twitter:description" content="当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。
-第一步：添加新用户，然后设置密码12adduser applegpasswd -a apple sudo
-第二步：禁止远程root登陆，修改默认端口，限制登陆次数既然已经有了新用户">
+<meta name="twitter:title" content="Git基础(三)--常见错误及解决方案">
+<meta name="twitter:description" content="前言了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。
+常见错误You have unmerged files12345678$ git statusOn branch masterYou have unmerged paths.(fix confli">
 
 
 
@@ -101,13 +98,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/03/Git基础(三)--常见错误及解决方案/"/>
 
 
 
 
 
-  <title> 从零开始建站(三)--增强VPS的安全性 | Golden Era's Blog </title>
+  <title> Git基础(三)--常见错误及解决方案 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -238,7 +235,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/Git基础(三)--常见错误及解决方案/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -262,7 +259,7 @@
             
             
               
-                从零开始建站(三)--增强VPS的安全性
+                Git基础(三)--常见错误及解决方案
               
             
           </h2>
@@ -277,8 +274,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:51:20+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T14:53:14+08:00">
+                2017-03-03
               </time>
             
 
@@ -293,8 +290,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-22T15:00:17+08:00">
-                2017-02-22
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-07T10:34:33+08:00">
+                2017-03-07
               </time>
             
           </span>
@@ -308,8 +305,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/从零开始建站(三)--增强VPS的安全性/" itemprop="commentCount"></span>
+                <a href="/2017/03/03/Git基础(三)--常见错误及解决方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/Git基础(三)--常见错误及解决方案/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -340,22 +337,32 @@
       
 
       
-        <p>当你拥有一台新的 Linux Server 之后，为了增加安全性，可以做一些安全配置。<br>默认初始登录都是 root，以 root 用户来操作服务器是很不安全的，所以首要做的就是添加新用户，禁止root登录，改变默认端口。</p>
-<h2 id="第一步：添加新用户，然后设置密码"><a href="#第一步：添加新用户，然后设置密码" class="headerlink" title="第一步：添加新用户，然后设置密码"></a>第一步：添加新用户，然后设置密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">adduser apple</div><div class="line">gpasswd -a apple sudo</div></pre></td></tr></table></figure>
-<h2 id="第二步：禁止远程root登陆，修改默认端口，限制登陆次数"><a href="#第二步：禁止远程root登陆，修改默认端口，限制登陆次数" class="headerlink" title="第二步：禁止远程root登陆，修改默认端口，限制登陆次数"></a>第二步：禁止远程root登陆，修改默认端口，限制登陆次数</h2><p>既然已经有了新用户，所以应该禁止root用户登录，还可以通过修改默认端口22，来达到增加安全性的目的，相关配置文件在<code>/etc/ssh/sshd_config</code>里</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># 默认登陆端口</div><div class="line">Port 2334</div><div class="line"># 限制登陆次数</div><div class="line">MaxAuthTries 10</div></pre></td></tr></table></figure>
-<p>当然，还有更有效的工具，<a href="https://www.fail2ban.org/" target="_blank" rel="external">Fail2Ban</a>，相关介绍和使用会在接下来的文章中介绍。</p>
-<h2 id="第三步：使改变生效"><a href="#第三步：使改变生效" class="headerlink" title="第三步：使改变生效"></a>第三步：使改变生效</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># 重启ssh服务</div><div class="line">sudo service ssh restart</div></pre></td></tr></table></figure>
-<p>重启之后不要立即登出，先验证修改是否生效。打开一个新的命令行来验证刚才所作的改变。</p>
-<p>第四步：使用更加安全的 <code>ssh_key</code> 来登陆</p>
-<p>这一步不是必需的，只是为了方便和进一步增强安全性。配置ssh_keys之后，当你使用自己的电脑就不用输入密码。<br>ssh_key 的生成很简单 ，本地输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
-<p>这条命令会在 ～/.ssh/ 目录下生成 id_rsa 和 id_rsa.pub，即私钥和公钥。再在本地命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-copy-id apple@SERVER_IP_ADDRESS</div></pre></td></tr></table></figure></p>
-<p>，然后键入密码，这时就会将本地的公钥添加至服务器 ~/.ssh/authorized_keys 里，里面的内容就是已通过认证的公钥，当你使用这些客户端登录时，就不用输入密码<br>至此，你的服务器几乎能避免绝大多数攻击，如果要进一步增加安全性，则可向着如下方向改进：</p>
-<p>仅使用 ssh_key 登录，禁止普通用户登录<br>增加防火墙设置，将多次尝试登录的IP地址加入黑名单<br>添加安全证书的验证</p>
-<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
-<li><a href="https://www.v2ex.com/t/211641" target="_blank" rel="external">一些增强 SSH 安全性的技巧</a></li>
-<li><a href="https://www.linux.com/learn/tutorials/305769-advanced-ssh-security-tips-and-tricks" target="_blank" rel="external">Advanced SSH security tips and tricks</a></li>
-</ol>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>了解一些常见的错误对了解 Git 的原理也是很有帮助的，下面就是在日常工作中常见的一些错误信息以及解决方案。不能保证每个人引起错误的原因都是一样的，下面的一些操作也不见得解决你遇到的问题，仅供参考。</p>
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><h3 id="You-have-unmerged-files"><a href="#You-have-unmerged-files" class="headerlink" title="You have unmerged files"></a>You have unmerged files</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git status</div><div class="line">On branch master</div><div class="line">You have unmerged paths.</div><div class="line">(fix conflicts and run &quot;git commit&quot;)</div><div class="line">Unmerged paths:</div><div class="line">(use &quot;git add &lt;file&gt;...&quot; to mark resolution)</div><div class="line">both modified:      index.html</div><div class="line">no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</div></pre></td></tr></table></figure>
+<p>原因：见上面conflict的原因<br>解决方案：查看发生冲突的文件，手动修改后commit，通过 <code>git mergetool</code> 可以看到图形化的界面，便于直观的理解。<br>参考：<a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%9A%84%E6%96%B0%E5%BB%BA%E4%B8%8E%E5%90%88%E5%B9%B6" target="_blank" rel="external">Git 分支 - 分支的新建与合并</a></p>
+<h3 id="add操作-warning"><a href="#add操作-warning" class="headerlink" title="add操作 warning"></a>add操作 warning</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git add -A</div><div class="line">warning: LF will be replaced by CRLF in file</div><div class="line">The file will have its original line endings in your working directory.</div></pre></td></tr></table></figure>
+<p>原因：Linux平台下的换行符是 LF，而Windows下则是 CRLF，所以当你再 Windows 保存文件时候，换行符会被保存为<br>建议：统一换行符为 LF<br>方案：<br>Git 命令行输入如下命令，禁止自动转换换行符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global core.autocrlf false</div></pre></td></tr></table></figure></p>
+<p>Sulime Text下的用户自定义增加以下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;default_line_ending&quot;: &quot;unix&quot;,  </div><div class="line">&quot;trim_trailing_white_space_on_save&quot;: true,</div><div class="line">&quot;ensure_newline_at_eof_on_save&quot;: true,</div></pre></td></tr></table></figure></p>
+<h3 id="pull-失败"><a href="#pull-失败" class="headerlink" title="pull 失败"></a>pull 失败</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">You have not concluded your merge (MERGE_HEAD exists).</div><div class="line">Please, commit your changes before you can merge.</div></pre></td></tr></table></figure>
+<p>原因：之前进行 Pull 操作时自动合并失败，和原文件有冲突<br>解决方案：取消 Pull 操作然后手动合并</p>
+<ul>
+<li><p>取消合并</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git merge --abort</div><div class="line">git reset --merge</div></pre></td></tr></table></figure>
+</li>
+<li><p>解决冲突</p>
+</li>
+<li>重新 add and commit</li>
+<li>拉取分支然后合并，<code>git pull</code></li>
+</ul>
+<p>参考：<a href="http://stackoverflow.com/questions/11646107/you-have-not-concluded-your-merge-merge-head-exists" target="_blank" rel="external">You have not concluded your merge (MERGE_HEAD exists)</a>   </p>
+<h3 id="push-error-failed-to-push-some-refs-to-‘’"><a href="#push-error-failed-to-push-some-refs-to-‘’" class="headerlink" title="push error: failed to push some refs to ‘’"></a>push error: failed to push some refs to ‘’</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git push origin master</div><div class="line">To john@githost:simplegit.git</div><div class="line">! [rejected] master -&gt; master (non-fast forward)</div><div class="line">error: failed to push some refs to &apos;john@githost:simplegit.git&apos;</div></pre></td></tr></table></figure>
+<p>原因：之前有人进行过提交，本地项目并不是最新的，在提交之前，必须合并当前分支至最新<br>解决方案：<code>git merge origin/master</code>，当你直接在master分支的时候，可以<code>git pull</code>，相当于<code>git fetch + git merge</code><br>参考：<a href="https://git-scm.com/book/zh/v2/%E5%88%86%E5%B8%83%E5%BC%8F-Git-%E5%90%91%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E8%B4%A1%E7%8C%AE" target="_blank" rel="external">分布式 Git - 向一个项目贡献</a></p>
+<h3 id="checkout-Unable-to-create-‘-path-project-git-index-lock’"><a href="#checkout-Unable-to-create-‘-path-project-git-index-lock’" class="headerlink" title="checkout : Unable to create ‘/path/project/.git/index.lock’"></a>checkout : Unable to create ‘/path/project/.git/index.lock’</h3><p>报错信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Git - fatal: Unable to create &apos;/path/my_project/.git/index.lock&apos;: File exists.</div></pre></td></tr></table></figure></p>
+<p>解决方案：<code>rm -f ./.git/index.lock</code><br>参考资料：<a href="http://stackoverflow.com/questions/7860751/git-fatal-unable-to-create-path-my-project-git-index-lock-file-exists" target="_blank" rel="external">stack参考</a></p>
+<h3 id="其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted"><a href="#其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted" class="headerlink" title="其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted"></a>其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted</h3><p>find the sha and delete it<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rm .git/object/0f/fe69</div></pre></td></tr></table></figure></p>
+<p>then you will get this error<br>error: fatal: bad object HEAD<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git fetch origin </div><div class="line">git reset --hard origin/master</div></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>可以看到，每次错误信息出现，Git 都会有很详细的提示，有些时候还会有原因解释以及基本的建议解决方案。所以，不要一出错就复制错误信息到网上取搜索，然后复制一些你自己也不知道有什么作用的命令，有时候甚至会酿成大祸（有一次就删除了许多图片然后push到了服务器，幸亏有备份）。</p>
+<p>退一步讲，如果你要复制网络上的命令，有一条准则谨记，<strong>任何命令中带有 –hard 参数的都谨慎执行</strong>，很有可能造成不可逆的损失。</p>
 
       
     </div>
@@ -379,11 +386,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/vps/" rel="tag"># vps</a>
-          
-            <a href="/tags/安全/" rel="tag"># 安全</a>
-          
-            <a href="/tags/技术/" rel="tag"># 技术</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -392,8 +395,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/" rel="next" title="从零开始建站(二)--VirtualHost的配置">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(二)--VirtualHost的配置
+              <a href="/2017/02/28/如何设计图片表/" rel="next" title="如何设计图片表">
+                <i class="fa fa-chevron-left"></i> 如何设计图片表
               </a>
             
           </div>
@@ -401,10 +404,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/Apache 不同版本配置差异/" rel="prev" title="Apache 不同版本配置差异">
-                Apache 不同版本配置差异 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -430,8 +429,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/从零开始建站(三)--增强VPS的安全性/"
-           data-title="从零开始建站(三)--增强VPS的安全性" data-url="http://yoursite.com/2017/02/16/从零开始建站(三)--增强VPS的安全性/">
+      <div class="ds-thread" data-thread-key="2017/03/03/Git基础(三)--常见错误及解决方案/"
+           data-title="Git基础(三)--常见错误及解决方案" data-url="http://yoursite.com/2017/03/03/Git基础(三)--常见错误及解决方案/">
       </div>
     
   </div>
@@ -535,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：添加新用户，然后设置密码"><span class="nav-number">1.</span> <span class="nav-text">第一步：添加新用户，然后设置密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：禁止远程root登陆，修改默认端口，限制登陆次数"><span class="nav-number">2.</span> <span class="nav-text">第二步：禁止远程root登陆，修改默认端口，限制登陆次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：使改变生效"><span class="nav-number">3.</span> <span class="nav-text">第三步：使改变生效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">4.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见错误"><span class="nav-number">2.</span> <span class="nav-text">常见错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#You-have-unmerged-files"><span class="nav-number">2.1.</span> <span class="nav-text">You have unmerged files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add操作-warning"><span class="nav-number">2.2.</span> <span class="nav-text">add操作 warning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pull-失败"><span class="nav-number">2.3.</span> <span class="nav-text">pull 失败</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#push-error-failed-to-push-some-refs-to-‘’"><span class="nav-number">2.4.</span> <span class="nav-text">push error: failed to push some refs to ‘’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#checkout-Unable-to-create-‘-path-project-git-index-lock’"><span class="nav-number">2.5.</span> <span class="nav-text">checkout : Unable to create ‘/path/project/.git/index.lock’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他错误：fatal-object-0ffe6959ad4ca1exxx-is-corrupted"><span class="nav-number">2.6.</span> <span class="nav-text">其他错误：fatal: object 0ffe6959ad4ca1exxx is corrupted</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
