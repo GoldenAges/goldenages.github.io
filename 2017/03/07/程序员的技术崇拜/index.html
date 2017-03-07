@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术,编码," />
+  <meta name="keywords" content="技术,程序员,个人感悟," />
 
 
 
@@ -58,19 +58,19 @@
 
 
 
-<meta name="description" content="前言网上经常看到有人混淆这几个概念，把 md5、sha256 甚至还有 Base64 当作加密算法，弄不清楚摘要、编码、加密的区别，下面就这几个概念结合几个例子来区分以下。
-编码编码本质上是信息形式的转化。编码的目的不是为了加密信息，是将消息转化成统一的格式，方便在不同系统之中传输。例如最常见的ASCII字符编码。由于网络上只能传输二进制数据，任何数据如果想要经由网络传输，就必须先转化成二进制，A">
+<meta name="description" content="在入行之前，曾一直将程序员视作一种“上帝”职业，因为他们做着和上帝一样的事情——创造世界，和上帝的不同之处在于，上帝只存在于圣经和信仰之中。各种电视剧、电影的熏陶，更是给“程序员”蒙上上了一层神秘的面纱，他们噼噼啪啪敲几下键盘，安保就暂时瘫痪了，社区会大规模停电，监狱的门也会打开，似乎这类人全知全能，动动手指就能给世界造成不可估量的影响。后来发现，这种程序员也和上帝一样——只存在于电影之中。
+入行">
 <meta property="og:type" content="article">
-<meta property="og:title" content="编码、散列（哈希）、加密的区别">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/编码、摘要、加密的区别/index.html">
+<meta property="og:title" content="程序员的技术崇拜">
+<meta property="og:url" content="http://yoursite.com/2017/03/07/程序员的技术崇拜/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="前言网上经常看到有人混淆这几个概念，把 md5、sha256 甚至还有 Base64 当作加密算法，弄不清楚摘要、编码、加密的区别，下面就这几个概念结合几个例子来区分以下。
-编码编码本质上是信息形式的转化。编码的目的不是为了加密信息，是将消息转化成统一的格式，方便在不同系统之中传输。例如最常见的ASCII字符编码。由于网络上只能传输二进制数据，任何数据如果想要经由网络传输，就必须先转化成二进制，A">
-<meta property="og:updated_time" content="2017-02-23T07:16:32.000Z">
+<meta property="og:description" content="在入行之前，曾一直将程序员视作一种“上帝”职业，因为他们做着和上帝一样的事情——创造世界，和上帝的不同之处在于，上帝只存在于圣经和信仰之中。各种电视剧、电影的熏陶，更是给“程序员”蒙上上了一层神秘的面纱，他们噼噼啪啪敲几下键盘，安保就暂时瘫痪了，社区会大规模停电，监狱的门也会打开，似乎这类人全知全能，动动手指就能给世界造成不可估量的影响。后来发现，这种程序员也和上帝一样——只存在于电影之中。
+入行">
+<meta property="og:updated_time" content="2017-03-07T06:37:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="编码、散列（哈希）、加密的区别">
-<meta name="twitter:description" content="前言网上经常看到有人混淆这几个概念，把 md5、sha256 甚至还有 Base64 当作加密算法，弄不清楚摘要、编码、加密的区别，下面就这几个概念结合几个例子来区分以下。
-编码编码本质上是信息形式的转化。编码的目的不是为了加密信息，是将消息转化成统一的格式，方便在不同系统之中传输。例如最常见的ASCII字符编码。由于网络上只能传输二进制数据，任何数据如果想要经由网络传输，就必须先转化成二进制，A">
+<meta name="twitter:title" content="程序员的技术崇拜">
+<meta name="twitter:description" content="在入行之前，曾一直将程序员视作一种“上帝”职业，因为他们做着和上帝一样的事情——创造世界，和上帝的不同之处在于，上帝只存在于圣经和信仰之中。各种电视剧、电影的熏陶，更是给“程序员”蒙上上了一层神秘的面纱，他们噼噼啪啪敲几下键盘，安保就暂时瘫痪了，社区会大规模停电，监狱的门也会打开，似乎这类人全知全能，动动手指就能给世界造成不可估量的影响。后来发现，这种程序员也和上帝一样——只存在于电影之中。
+入行">
 
 
 
@@ -98,13 +98,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/编码、摘要、加密的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/07/程序员的技术崇拜/"/>
 
 
 
 
 
-  <title> 编码、散列（哈希）、加密的区别 | Golden Era's Blog </title>
+  <title> 程序员的技术崇拜 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +235,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/编码、摘要、加密的区别/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/程序员的技术崇拜/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -259,7 +259,7 @@
             
             
               
-                编码、散列（哈希）、加密的区别
+                程序员的技术崇拜
               
             
           </h2>
@@ -274,8 +274,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T15:39:12+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-07T14:37:07+08:00">
+                2017-03-07
               </time>
             
 
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-23T15:16:32+08:00">
-                2017-02-23
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-07T14:37:43+08:00">
+                2017-03-07
               </time>
             
           </span>
@@ -305,8 +305,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/编码、摘要、加密的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/编码、摘要、加密的区别/" itemprop="commentCount"></span>
+                <a href="/2017/03/07/程序员的技术崇拜/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/程序员的技术崇拜/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -337,29 +337,12 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网上经常看到有人混淆这几个概念，把 md5、sha256 甚至还有 Base64 当作加密算法，弄不清楚摘要、编码、加密的区别，下面就这几个概念结合几个例子来区分以下。</p>
-<h2 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h2><p>编码本质上是信息形式的转化。编码的目的不是为了加密信息，是将消息转化成统一的格式，方便在不同系统之中传输。例如最常见的ASCII字符编码。由于网络上只能传输二进制数据，任何数据如果想要经由网络传输，就必须先转化成二进制，ASCII 提供了一个将A、B、C等字母转化为二进制的规则。</p>
-<p>信息—&gt;编码—&gt;二进制—&gt;解码—&gt;信息</p>
-<p><strong>通过解码可以还原原始信息</strong></p>
-<p>例子：ASCII, Unicode, URL Encoding, Base64等</p>
-<h2 id="摘要（哈希）"><a href="#摘要（哈希）" class="headerlink" title="摘要（哈希）"></a>摘要（哈希）</h2><p>摘要的目的是为了校验信息的完整性，保证信息在传输过程中不被篡改。例如你在网络上需要下载一个非官方论坛软件，但又担心软件被第三方篡改，可以将该软件的md5值和官方下载的md5值进行对比，如果一致，则可放心使用。摘要算法有如下几个特点</p>
-<ol>
-<li>输入相同时，输出一致</li>
-<li>输入不同时，输出不同</li>
-<li>通过输出，不能计算出输入</li>
-<li>对输入的任何细微修改，都会导致完全不同的输出</li>
-</ol>
-<p>由于以上特性，摘要也常被用来给密码加密，不过由于计算机运算能力的提升以及越来越丰富的破解手段，已不建议使用摘要算法来给密码加密。</p>
-<p><strong>通过摘要信息不能还原原始信息</strong></p>
-<p>例子：md5, sha系列</p>
-<h2 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h2><p>加密是为了保证数据安全传输，使得其他人不能获取的具体信息内容。例如你想给某人发送一封密信，或通过互联网给人发送密码，这些对隐秘性要求比较强的事情，就需要对信息进行加密。<br>加密的专注点不在可用性上，这点和编码有明显的区别。加密是可逆的，明文 + 秘钥 = 加密信息<br>加密又分为对称加密和非对称加密，区别在于在加密和解密信息时秘钥是不是同一个。</p>
-<p><strong>加密信息能通过密钥被还原为原始信息</strong></p>
-<p>对称加密：DES, AES<br>非对称加密： RSA </p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://danielmiessler.com/study/encoding-encryption-hashing-obfuscation/#gs.cxCrQLA" target="_blank" rel="external">编码、加密、摘要的区别</a></li>
-<li><a href="https://segmentfault.com/a/1190000004461428" target="_blank" rel="external">对称加密和非对称加密</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/SHA%E5%AE%B6%E6%97%8F" target="_blank" rel="external">SHA家族</a></li>
-</ul>
+        <p>在入行之前，曾一直将程序员视作一种“上帝”职业，因为他们做着和上帝一样的事情——创造世界，和上帝的不同之处在于，上帝只存在于圣经和信仰之中。各种电视剧、电影的熏陶，更是给“程序员”蒙上上了一层神秘的面纱，他们噼噼啪啪敲几下键盘，安保就暂时瘫痪了，社区会大规模停电，监狱的门也会打开，似乎这类人全知全能，动动手指就能给世界造成不可估量的影响。后来发现，这种程序员也和上帝一样——只存在于电影之中。</p>
+<p>入行之初，天天打杂，这里排版有错误，那里显示不正确，根据浏览量做一个动态排序等，有些失望。大部分时间做的都是些很boring的东西，甚至连QQ也盗不到，电脑也不会修。然而失望归失望，却也并不沮丧，毕竟这世上绝大部分人的都会平凡的度过这一生，能成为其中一份子也是幸运。</p>
+<p>经常逛某个论坛，里面聚集了很多优秀的程序员，他们技术高超，乐于助人，有着丰富的经验和见识，有时也会产生高价值的讨论。然而部分讨论区里总弥漫着些傲慢和偏见的气息，喜欢通过贬低甚至嘲讽他人的意见或看法来满足自己的虚荣心，后来发现，这种弱点属于人类。但是对技术的过分崇拜这点，在程序员身上看得比较多。</p>
+<p>我对技术崇拜的理解是，不管什么问题，追根问底之后都归咎于技术问题，认为技术就是银弹，认为可以通过提高技术去摆脱现在的困境。一般的论调是这样的，“这样的公司，也没必要呆下去了”，“还是赶快提高自己的技术，赶快离职吧”。技术很重要吗？当然，吃饭的家伙怎么可能不重要呢？但是工作素质值得不仅仅是你的技术。如果将工作能力分为两部分为表象能力和潜在能力的话，那么编程技能顶多算表象能力，不过由于其相对稀缺性，在互联网方面的招聘所占比例可能较大。表象的能力可以通过培训获得，容易获取；潜能难以测量和获得，对行为和表现产生关键的影响，职位越高端，对潜在能力需求越大。</p>
+<p>你说写好代码就可以了，那当你遇到不合理的需求，是不是是总是摆出一脸鄙夷和嫌弃的眼神？你从对方的角度考虑过为什么要提这个要求了吗？当客户或是PM的思路逻辑不清晰时，是不是又一副白眼翻过去了，你有帮助过他们捋一下逻辑吗？当测试指出你一个Bug时，你是不是在心里咆哮，哪个神经病会这样操作？这些问题，我想大部分人都遇到过，绝大多数人怕是带着不屑和一丁点的骄傲，从心理上俯视那些不会写程序的人。</p>
+<p>技术能力确实相当重要，尤其是对于互联网这样的新兴行业来说，只是也不要忽视了其他自我综合素质的培养。一叶障目，不仅对个人的职业发展，而且对这个世界的看法和态度，都是一种莫大的不幸与悲哀。</p>
 
       
     </div>
@@ -385,7 +368,9 @@
           
             <a href="/tags/技术/" rel="tag"># 技术</a>
           
-            <a href="/tags/编码/" rel="tag"># 编码</a>
+            <a href="/tags/程序员/" rel="tag"># 程序员</a>
+          
+            <a href="/tags/个人感悟/" rel="tag"># 个人感悟</a>
           
         </div>
       
@@ -394,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/Git基础(一)--配置SSH-Key/" rel="next" title="Git基础(一)--安装和配置SSH-Key">
-                <i class="fa fa-chevron-left"></i> Git基础(一)--安装和配置SSH-Key
+              <a href="/2017/03/03/Git基础(三)--常见错误及解决方案/" rel="next" title="Git基础(三)--常见错误及解决方案">
+                <i class="fa fa-chevron-left"></i> Git基础(三)--常见错误及解决方案
               </a>
             
           </div>
@@ -403,10 +388,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/23/Git基础(二)--常见撤销操作/" rel="prev" title="Git基础(二)--常见撤销操作">
-                Git基础(二)--常见撤销操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -432,8 +413,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/编码、摘要、加密的区别/"
-           data-title="编码、散列（哈希）、加密的区别" data-url="http://yoursite.com/2017/02/16/编码、摘要、加密的区别/">
+      <div class="ds-thread" data-thread-key="2017/03/07/程序员的技术崇拜/"
+           data-title="程序员的技术崇拜" data-url="http://yoursite.com/2017/03/07/程序员的技术崇拜/">
       </div>
     
   </div>
@@ -457,17 +438,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -527,22 +499,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编码"><span class="nav-number">2.</span> <span class="nav-text">编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要（哈希）"><span class="nav-number">3.</span> <span class="nav-text">摘要（哈希）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密"><span class="nav-number">4.</span> <span class="nav-text">加密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
