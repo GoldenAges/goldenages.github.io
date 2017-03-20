@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="技术,PHP," />
 
 
 
@@ -58,28 +58,23 @@
 
 
 
-<meta name="description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
+<meta name="description" content="前言PHP 有两种赋值方式，一种是传值赋值，一种是引用赋值。引用的意思简而概之就是不同变量使用同一个值，你可以理解为一个变量的“别名”。两者的区别一句话概括之，传值赋值替换了变量指向，引用赋值改变了变量指向，下面以实际的例子来解释这句话。
+引用传值赋值和传值赋值一个传值赋值简单的例子123456789$var1 = 1;$var2 = $var1;$var1 = 2;echo &amp;quot;$var">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(二)--VirtualHost的配置">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/index.html">
+<meta property="og:title" content="关于PHP的两种赋值方式">
+<meta property="og:url" content="http://yoursite.com/2017/03/11/关于PHP的传值引用/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
-<meta property="og:updated_time" content="2017-02-20T02:18:53.000Z">
+<meta property="og:description" content="前言PHP 有两种赋值方式，一种是传值赋值，一种是引用赋值。引用的意思简而概之就是不同变量使用同一个值，你可以理解为一个变量的“别名”。两者的区别一句话概括之，传值赋值替换了变量指向，引用赋值改变了变量指向，下面以实际的例子来解释这句话。
+引用传值赋值和传值赋值一个传值赋值简单的例子123456789$var1 = 1;$var2 = $var1;$var1 = 2;echo &amp;quot;$var">
+<meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-14-143423.jpg">
+<meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-14-151816.jpg">
+<meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-20-154054.jpg">
+<meta property="og:updated_time" content="2017-03-20T15:50:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(二)--VirtualHost的配置">
-<meta name="twitter:description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
+<meta name="twitter:title" content="关于PHP的两种赋值方式">
+<meta name="twitter:description" content="前言PHP 有两种赋值方式，一种是传值赋值，一种是引用赋值。引用的意思简而概之就是不同变量使用同一个值，你可以理解为一个变量的“别名”。两者的区别一句话概括之，传值赋值替换了变量指向，引用赋值改变了变量指向，下面以实际的例子来解释这句话。
+引用传值赋值和传值赋值一个传值赋值简单的例子123456789$var1 = 1;$var2 = $var1;$var1 = 2;echo &amp;quot;$var">
+<meta name="twitter:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-14-143423.jpg">
 
 
 
@@ -107,13 +102,13 @@ s">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/11/关于PHP的传值引用/"/>
 
 
 
 
 
-  <title> 从零开始建站(二)--VirtualHost的配置 | Golden Era's Blog </title>
+  <title> 关于PHP的两种赋值方式 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -244,7 +239,7 @@ s">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/关于PHP的传值引用/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -268,7 +263,7 @@ s">
             
             
               
-                从零开始建站(二)--VirtualHost的配置
+                关于PHP的两种赋值方式
               
             
           </h2>
@@ -283,8 +278,8 @@ s">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:49:23+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T15:27:26+08:00">
+                2017-03-11
               </time>
             
 
@@ -299,8 +294,8 @@ s">
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:53+08:00">
-                2017-02-20
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-20T23:50:48+08:00">
+                2017-03-20
               </time>
             
           </span>
@@ -314,8 +309,8 @@ s">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/从零开始建站(二)--VirtualHost的配置/" itemprop="commentCount"></span>
+                <a href="/2017/03/11/关于PHP的传值引用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/11/关于PHP的传值引用/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,38 +341,24 @@ s">
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。</p>
-<h2 id="第一步：新建目录"><a href="#第一步：新建目录" class="headerlink" title="第一步：新建目录"></a>第一步：新建目录</h2><p>在<code>/var/www</code>新建目录<br>新建目录</p>
-<pre><code>sudo mkdir -p /var/www/mysite.com
-</code></pre><p>给予访问权限</p>
-<pre><code>sudo chown -R $USER:$USER /var/www/mysite.com
-</code></pre><h2 id="第二步：新建test-page"><a href="#第二步：新建test-page" class="headerlink" title="第二步：新建test page"></a>第二步：新建test page</h2><pre><code>vi /var/www/mysite.com/index.html
-</code></pre><p>输入以下内容</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Welcome to mysite.com!&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Success!  The example.com virtual host is working!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h2 id="第三步：针对每一个网站增加一个虚拟配置文件"><a href="#第三步：针对每一个网站增加一个虚拟配置文件" class="headerlink" title="第三步：针对每一个网站增加一个虚拟配置文件"></a>第三步：针对每一个网站增加一个虚拟配置文件</h2><p>复制默认的配置文件</p>
-<pre><code>cp /etc/apache2/site-available/default /etc/apache2/site-available/mysite.com
-</code></pre><p>编辑配置文件</p>
-<pre><code>vi mysite.com.conf 
-</code></pre><p>建议的配置文件内容</p>
-<pre><code>&lt;VirtualHost *:80&gt;
-    ServerAdmin yourEmail@gmail.com
-    ServerName www.yoursite.com
-    DocumentRoot /var/www/example.com
-    ErrorLog ${APACHE_LOG_DIR}/mysite.com/error.log
-    CustomLog ${APACHE_LOG_DIR}/mysite.com/access.log
-&lt;/VirtualHost&gt;
-</code></pre><h2 id="第四步：激活配置文件"><a href="#第四步：激活配置文件" class="headerlink" title="第四步：激活配置文件"></a>第四步：激活配置文件</h2><p>激活配置文件</p>
-<pre><code>sudo a2ensite mysite.com.conf
-</code></pre><p>重启apahce</p>
-<pre><code>sudo service apache2 restart
-</code></pre><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p>(How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS)[<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts" target="_blank" rel="external">https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts</a>]</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>PHP 有两种赋值方式，一种是传值赋值，一种是引用赋值。引用的意思简而概之就是不同变量使用同一个值，你可以理解为一个变量的“别名”。<br>两者的区别一句话概括之，传值赋值<strong>替换</strong>了变量指向，引用赋值<strong>改变</strong>了变量指向，下面以实际的例子来解释这句话。</p>
+<h2 id="引用传值赋值和传值赋值"><a href="#引用传值赋值和传值赋值" class="headerlink" title="引用传值赋值和传值赋值"></a>引用传值赋值和传值赋值</h2><p>一个传值赋值简单的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$var1 = 1;</div><div class="line">$var2 = $var1;</div><div class="line">$var1 = 2;</div><div class="line">echo &quot;$var2:&quot;, $var2;// 1</div><div class="line"></div><div class="line">$var3 =&amp; $var1;</div><div class="line"></div><div class="line">$var3++;</div><div class="line">echo &quot;$var1:&quot;, $var1;// 3</div></pre></td></tr></table></figure></p>
+<p>上面的例子很好理解，$var2 复制了一份 $var1 的值，尽管后来 $var1 改变了，可 $var2 的值不会变化。<code>$var3 =&amp; $var1</code> 这个语句表明了 $var3 和 $var1 指向了同一块区域，即 <code>var3</code>相当于 <code>var1</code> 的一个别名，改变了 $var3 的值时，$var1 的值同时也会变化。</p>
+<p>一张图解释上段程序的赋值过程<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-14-143423.jpg" alt=""></p>
+<h2 id="函数中的两种赋值方式"><a href="#函数中的两种赋值方式" class="headerlink" title="函数中的两种赋值方式"></a>函数中的两种赋值方式</h2><p>两种传值方式的性质不同导致了在函数调用中的传值方式不一样，如果函数参数中变量名带 ‘&amp;’ 符号的，即表明该参数是传值引用，仅需在函数定义处申明即可，不必在函数调用时申明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$var1 = 1;</div><div class="line"></div><div class="line">function foo(&amp;$var2) &#123;</div><div class="line">    $var2 =&amp; $_SERVER[&apos;HTTP_HOST&apos;];</div><div class="line">&#125;</div><div class="line"></div><div class="line">function bar(&amp;$var2) &#123;</div><div class="line">    $var2 = 2;</div><div class="line">&#125;</div><div class="line"></div><div class="line">echo &quot;foo:&quot;, foo($var1); // 1</div><div class="line">echo &quot;bar:&quot;, bar($var1); // 2</div></pre></td></tr></table></figure></p>
+<p>为什么这里 <code>$var1</code>  的值没有像上面一样改变，请注意开篇提到的，引用表示变量的<strong>别名</strong>，符号<code>&amp;</code>即表明了改变了该变量的指向，<code>$var2 =&amp; $_SERVER[&#39;HTTP_HOST&#39;]</code>表示 <code>$_SERVER[&#39;HTTP_HOST&#39;]</code> 有了另一个别名<code>$var2</code>，解除了和<code>$var1</code>的别名关系，变量<code>$var2</code>的值指向了<code>$_SERVER[&#39;HTTP_HOST&#39;]</code>。当调用函数bar时，就和我们之前设想的一样。</p>
+<p>一张图解释上面赋值过程:<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-14-151816.jpg" alt=""></p>
+<h2 id="函数的引用返回"><a href="#函数的引用返回" class="headerlink" title="函数的引用返回"></a>函数的引用返回</h2><p>PHP 提供了一种返回函数变量引用值的方法，在函数名称前加符号<code>&amp;</code>来表示返回返回值的引用，参见例子</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"> function &amp;func()&#123;</div><div class="line">        static $var = 1;</div><div class="line">        $var++;</div><div class="line">        return $var;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">$var1 =&amp; func();</div><div class="line">$var2 = func();</div><div class="line">echo &quot;var1:&quot;, $var1; // 4</div><div class="line">echo &quot;var2:&quot;, $var2; // 3</div><div class="line">$var1++;</div><div class="line">func();</div><div class="line">echo &quot;var1:&quot;, $var1; // 5</div><div class="line">echo &quot;var2:&quot;, $var2; // 3</div></pre></td></tr></table></figure>
+<p>首先关于静态变量的使用请参考<a href="http://php.net/manual/zh/language.variables.scope.php#language.variables.scope.static" target="_blank" rel="external">使用静态变量</a>，变量 $var 的作用域仍为在 func() 内部，和普通变量唯一的区别就在函数调用完毕后 $var 变量并不会被销毁，而会继续存在。<br>一张图解释上面赋值过程<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-20-154054.jpg" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>PHP 中的引用和 C 语言中的指针可谓天壤之别，一个是变量别名，一个是变量内存地址。相比起来，PHP 的引用可要简单了不少，只要牢记开篇提起的，引用是改变了变量的指向，相信对于 PHP 的变量引用就没有什么问题了。下一篇讲讲对象引用的问题。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://php.net/manual/en/language.references.whatare.php" target="_blank" rel="external">What References Are</a></li>
+<li><a href="http://php.net/manual/en/language.references.arent.php" target="_blank" rel="external">What References Are Not</a></li>
+<li><a href="http://php.net/manual/en/language.references.return.php" target="_blank" rel="external">Returning References</a></li>
+<li><a href="http://blog.51yip.com/php/878.html" target="_blank" rel="external">5个php实例，细致说明传值与传引用的区别</a></li>
+<li><a href="http://php.net/manual/zh/language.variables.scope.php#language.variables.scope.static" target="_blank" rel="external">使用静态变量</a></li>
+</ol>
 
       
     </div>
@@ -403,6 +384,8 @@ s">
           
             <a href="/tags/技术/" rel="tag"># 技术</a>
           
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
         </div>
       
 
@@ -410,8 +393,8 @@ s">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(一)--安装LAMP环境/" rel="next" title="从零开始建站(一)--安装LAMP环境">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(一)--安装LAMP环境
+              <a href="/2017/03/07/程序员的技术崇拜/" rel="next" title="程序员的技术崇拜">
+                <i class="fa fa-chevron-left"></i> 程序员的技术崇拜
               </a>
             
           </div>
@@ -420,8 +403,8 @@ s">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" rel="prev" title="从零开始建站(三)--增强VPS的安全性">
-                从零开始建站(三)--增强VPS的安全性 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/16/由一条短信说个人隐私/" rel="prev" title="从一条信用卡推荐短信说起">
+                从一条信用卡推荐短信说起 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -448,8 +431,8 @@ s">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/从零开始建站(二)--VirtualHost的配置/"
-           data-title="从零开始建站(二)--VirtualHost的配置" data-url="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/">
+      <div class="ds-thread" data-thread-key="2017/03/11/关于PHP的传值引用/"
+           data-title="关于PHP的两种赋值方式" data-url="http://yoursite.com/2017/03/11/关于PHP的传值引用/">
       </div>
     
   </div>
@@ -553,7 +536,7 @@ s">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：新建目录"><span class="nav-number">2.</span> <span class="nav-text">第一步：新建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：新建test-page"><span class="nav-number">3.</span> <span class="nav-text">第二步：新建test page</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：针对每一个网站增加一个虚拟配置文件"><span class="nav-number">4.</span> <span class="nav-text">第三步：针对每一个网站增加一个虚拟配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步：激活配置文件"><span class="nav-number">5.</span> <span class="nav-text">第四步：激活配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">6.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用传值赋值和传值赋值"><span class="nav-number">2.</span> <span class="nav-text">引用传值赋值和传值赋值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数中的两种赋值方式"><span class="nav-number">3.</span> <span class="nav-text">函数中的两种赋值方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的引用返回"><span class="nav-number">4.</span> <span class="nav-text">函数的引用返回</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">6.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>

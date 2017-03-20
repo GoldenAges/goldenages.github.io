@@ -42,7 +42,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技术," />
+  <meta name="keywords" content="安全,个人隐私," />
 
 
 
@@ -58,28 +58,37 @@
 
 
 
-<meta name="description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
+<meta name="description" content="前言信用卡推荐短信相信大家都收到过不少，各种推销电话也是，从最初收到短信的疑惑、忿忿不平到现在的习以为常，个人隐私与便利之间的矛盾让我们不得不忍受推销电话垃圾短信。然而前两天收到的一条短信引起了我的注意，似乎大公司对于如何利用用户信息又有了新的途径。
+短信事先声明：
+
+之前从来没有和上海银行有过任何联系
+QQ 安全中心里填了收到短信的手机号码
+
+短信内容是这样的：乍看之下似乎是一条普通的推荐信用卡">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从零开始建站(二)--VirtualHost的配置">
-<meta property="og:url" content="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/index.html">
+<meta property="og:title" content="从一条信用卡推荐短信说起">
+<meta property="og:url" content="http://yoursite.com/2017/03/16/由一条短信说个人隐私/index.html">
 <meta property="og:site_name" content="Golden Era's Blog">
-<meta property="og:description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
-<meta property="og:updated_time" content="2017-02-20T02:18:53.000Z">
+<meta property="og:description" content="前言信用卡推荐短信相信大家都收到过不少，各种推销电话也是，从最初收到短信的疑惑、忿忿不平到现在的习以为常，个人隐私与便利之间的矛盾让我们不得不忍受推销电话垃圾短信。然而前两天收到的一条短信引起了我的注意，似乎大公司对于如何利用用户信息又有了新的途径。
+短信事先声明：
+
+之前从来没有和上海银行有过任何联系
+QQ 安全中心里填了收到短信的手机号码
+
+短信内容是这样的：乍看之下似乎是一条普通的推荐信用卡">
+<meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-17-015510.jpg">
+<meta property="og:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-16-143630.jpg">
+<meta property="og:updated_time" content="2017-03-20T15:50:45.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从零开始建站(二)--VirtualHost的配置">
-<meta name="twitter:description" content="前言当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。
-第一步：新建目录在/var/www新建目录新建目录
-sudo mkdir -p /var/www/mysite.com
-给予访问权限
-s">
+<meta name="twitter:title" content="从一条信用卡推荐短信说起">
+<meta name="twitter:description" content="前言信用卡推荐短信相信大家都收到过不少，各种推销电话也是，从最初收到短信的疑惑、忿忿不平到现在的习以为常，个人隐私与便利之间的矛盾让我们不得不忍受推销电话垃圾短信。然而前两天收到的一条短信引起了我的注意，似乎大公司对于如何利用用户信息又有了新的途径。
+短信事先声明：
+
+之前从来没有和上海银行有过任何联系
+QQ 安全中心里填了收到短信的手机号码
+
+短信内容是这样的：乍看之下似乎是一条普通的推荐信用卡">
+<meta name="twitter:image" content="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-17-015510.jpg">
 
 
 
@@ -107,13 +116,13 @@ s">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/16/由一条短信说个人隐私/"/>
 
 
 
 
 
-  <title> 从零开始建站(二)--VirtualHost的配置 | Golden Era's Blog </title>
+  <title> 从一条信用卡推荐短信说起 | Golden Era's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -244,7 +253,7 @@ s">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/由一条短信说个人隐私/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Golden Era">
@@ -268,7 +277,7 @@ s">
             
             
               
-                从零开始建站(二)--VirtualHost的配置
+                从一条信用卡推荐短信说起
               
             
           </h2>
@@ -283,8 +292,8 @@ s">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-16T11:49:23+08:00">
-                2017-02-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T22:07:25+08:00">
+                2017-03-16
               </time>
             
 
@@ -299,8 +308,8 @@ s">
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2017-02-20T10:18:53+08:00">
-                2017-02-20
+              <time title="更新于" itemprop="dateModified" datetime="2017-03-20T23:50:45+08:00">
+                2017-03-20
               </time>
             
           </span>
@@ -314,8 +323,8 @@ s">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/16/从零开始建站(二)--VirtualHost的配置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/16/从零开始建站(二)--VirtualHost的配置/" itemprop="commentCount"></span>
+                <a href="/2017/03/16/由一条短信说个人隐私/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/16/由一条短信说个人隐私/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -346,38 +355,32 @@ s">
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当LAMP环境搭建好之后，已经能通过ip地址访问到默认的index.html页面了，默认网站根目录是/var/www，在从零开始建站（一）– 安装LAMP环境 最后直接访问IP就是访问的该目录。但是，为了方便管理，一般为每个站都单独建一个目录，一个配置文件。</p>
-<h2 id="第一步：新建目录"><a href="#第一步：新建目录" class="headerlink" title="第一步：新建目录"></a>第一步：新建目录</h2><p>在<code>/var/www</code>新建目录<br>新建目录</p>
-<pre><code>sudo mkdir -p /var/www/mysite.com
-</code></pre><p>给予访问权限</p>
-<pre><code>sudo chown -R $USER:$USER /var/www/mysite.com
-</code></pre><h2 id="第二步：新建test-page"><a href="#第二步：新建test-page" class="headerlink" title="第二步：新建test page"></a>第二步：新建test page</h2><pre><code>vi /var/www/mysite.com/index.html
-</code></pre><p>输入以下内容</p>
-<pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Welcome to mysite.com!&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Success!  The example.com virtual host is working!&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre><h2 id="第三步：针对每一个网站增加一个虚拟配置文件"><a href="#第三步：针对每一个网站增加一个虚拟配置文件" class="headerlink" title="第三步：针对每一个网站增加一个虚拟配置文件"></a>第三步：针对每一个网站增加一个虚拟配置文件</h2><p>复制默认的配置文件</p>
-<pre><code>cp /etc/apache2/site-available/default /etc/apache2/site-available/mysite.com
-</code></pre><p>编辑配置文件</p>
-<pre><code>vi mysite.com.conf 
-</code></pre><p>建议的配置文件内容</p>
-<pre><code>&lt;VirtualHost *:80&gt;
-    ServerAdmin yourEmail@gmail.com
-    ServerName www.yoursite.com
-    DocumentRoot /var/www/example.com
-    ErrorLog ${APACHE_LOG_DIR}/mysite.com/error.log
-    CustomLog ${APACHE_LOG_DIR}/mysite.com/access.log
-&lt;/VirtualHost&gt;
-</code></pre><h2 id="第四步：激活配置文件"><a href="#第四步：激活配置文件" class="headerlink" title="第四步：激活配置文件"></a>第四步：激活配置文件</h2><p>激活配置文件</p>
-<pre><code>sudo a2ensite mysite.com.conf
-</code></pre><p>重启apahce</p>
-<pre><code>sudo service apache2 restart
-</code></pre><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p>(How To Set Up Apache Virtual Hosts on Ubuntu 14.04 LTS)[<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts" target="_blank" rel="external">https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-14-04-lts</a>]</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>信用卡推荐短信相信大家都收到过不少，各种推销电话也是，从最初收到短信的疑惑、忿忿不平到现在的习以为常，个人隐私与便利之间的矛盾让我们不得不忍受推销电话垃圾短信。然而前两天收到的一条短信引起了我的注意，似乎大公司对于如何利用用户信息又有了新的途径。</p>
+<h2 id="短信"><a href="#短信" class="headerlink" title="短信"></a>短信</h2><p>事先声明：</p>
+<ol>
+<li>之前从来没有和上海银行有过任何联系</li>
+<li>QQ 安全中心里填了收到短信的手机号码</li>
+</ol>
+<p>短信内容是这样的：<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-17-015510.jpg" alt=""><br>乍看之下似乎是一条普通的推荐信用卡的信息吗，每个人都收到过不少。可是我上网搜索了一下，发现事情并没有想象的那么简单。这位朋友分享了他办这张信用卡的<a href="http://post.smzdm.com/p/493374/" target="_blank" rel="external">过程</a>，其中一句话引起了我的注意<br><img src="http://7xscq6.com1.z0.glb.clouddn.com/2017-03-16-143630.jpg" alt=""></p>
+<p>“好在公司附近就有上行的网点”。最令人惊奇的一点是，同样的，我公司附近有一家<strong>上海银行</strong>，轰的一声，脑子里一条猜疑逻辑链形成，大致步骤如下</p>
+<ol>
+<li>腾讯系APP（微信，QQ等）通过定位信息了解到我“常住地”有一家上海银行</li>
+<li>安全中心里填入了自己的手机号码</li>
+<li>腾讯和上海银行有某种 PY 交易，推荐办理腾讯的“彩贝卡”</li>
+</ol>
+<p>可能大家觉得我有点疑神疑鬼，可是仔细想想，如今都说大数据时代下无个人隐私，可是大数据的作用或者说盈利方式都比较单一，非法的主要有售卖个人信息，利用个人隐私各种诈骗活动，合法做一些个性化推荐、广告推荐或者猜你喜欢、安全登录检测等等，这些对于大数据价值的挖掘都处于比较初级的阶段，没有充分利用到那些数据的价值。</p>
+<p>可想想我刚才的遭遇，岂不是一起完美的未来大数据应用。既没有推荐算法那么明显，而且无形中还让你觉得“占了便宜”，退一步讲，就算对你没有任何价值，你也可能只会认为这是一条常规的垃圾短信，断不会和隐私泄漏这种事联系起来，所以，假若这个案例真如上面所推论那样，真是让人感觉有点害怕，科幻中的一些幻想夜里我们越来越近了。</p>
+<h2 id="关于幸存者偏差"><a href="#关于幸存者偏差" class="headerlink" title="关于幸存者偏差"></a>关于幸存者偏差</h2><p>可能使用心理学上的<a href="https://zh.wikipedia.org/wiki/%E5%80%96%E5%AD%98%E8%80%85%E5%81%8F%E5%B7%AE" target="_blank" rel="external"><strong>幸存者偏差效应</strong></a>可以解释我这种妄想，</p>
+<ol>
+<li>每个人都收到了无数办卡短信，只是因为上海银行离我比较近才觉察到</li>
+<li>又或者是“网上那么多分享办卡的，你也只注意到了这一条信息”</li>
+</ol>
+<p>真的希望这只是一种巧合，毕竟隐私被侵犯的感觉就好像裸着身子在街上跳舞，实在令人羞耻和愤怒，可能未来有一天裸着会变成一种习惯，然而对于现在来说，“衣不蔽体”实在是太不体面。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>大数据时代的个人隐私显得越来越薄弱，甚至有时你提起个人隐私还有人不屑的一笑，“呵，这个时代，还有什么隐私”，“既然都这样了，倒不如xxx”，我想大大不可如此悲观，进步是一点点争取来的，退步也是一点点放弃掉的，今天你放弃了你那一丁点的、微不足道的个人隐私，明天可能就是1984了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://post.smzdm.com/p/493374/" target="_blank" rel="external">网友办卡过程</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%80%96%E5%AD%98%E8%80%85%E5%81%8F%E5%B7%AE" target="_blank" rel="external">幸存者偏差效应</a></li>
+</ol>
 
       
     </div>
@@ -401,7 +404,9 @@ s">
       
         <div class="post-tags">
           
-            <a href="/tags/技术/" rel="tag"># 技术</a>
+            <a href="/tags/安全/" rel="tag"># 安全</a>
+          
+            <a href="/tags/个人隐私/" rel="tag"># 个人隐私</a>
           
         </div>
       
@@ -410,8 +415,8 @@ s">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/16/从零开始建站(一)--安装LAMP环境/" rel="next" title="从零开始建站(一)--安装LAMP环境">
-                <i class="fa fa-chevron-left"></i> 从零开始建站(一)--安装LAMP环境
+              <a href="/2017/03/11/关于PHP的传值引用/" rel="next" title="关于PHP的两种赋值方式">
+                <i class="fa fa-chevron-left"></i> 关于PHP的两种赋值方式
               </a>
             
           </div>
@@ -419,10 +424,6 @@ s">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/16/从零开始建站(三)--增强VPS的安全性/" rel="prev" title="从零开始建站(三)--增强VPS的安全性">
-                从零开始建站(三)--增强VPS的安全性 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -448,8 +449,8 @@ s">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/16/从零开始建站(二)--VirtualHost的配置/"
-           data-title="从零开始建站(二)--VirtualHost的配置" data-url="http://yoursite.com/2017/02/16/从零开始建站(二)--VirtualHost的配置/">
+      <div class="ds-thread" data-thread-key="2017/03/16/由一条短信说个人隐私/"
+           data-title="从一条信用卡推荐短信说起" data-url="http://yoursite.com/2017/03/16/由一条短信说个人隐私/">
       </div>
     
   </div>
@@ -553,7 +554,7 @@ s">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一步：新建目录"><span class="nav-number">2.</span> <span class="nav-text">第一步：新建目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二步：新建test-page"><span class="nav-number">3.</span> <span class="nav-text">第二步：新建test page</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三步：针对每一个网站增加一个虚拟配置文件"><span class="nav-number">4.</span> <span class="nav-text">第三步：针对每一个网站增加一个虚拟配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第四步：激活配置文件"><span class="nav-number">5.</span> <span class="nav-text">第四步：激活配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考："><span class="nav-number">6.</span> <span class="nav-text">参考：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#短信"><span class="nav-number">2.</span> <span class="nav-text">短信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于幸存者偏差"><span class="nav-number">3.</span> <span class="nav-text">关于幸存者偏差</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
